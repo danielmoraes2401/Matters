@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cmath> <<<<<--------------------
+using namespace std;
+
+
+int main() {
+ /*
+  ARITMETICA
+    adicao = (+)
+    subtracao = (-)
+    multipli = (*)
+    divisao = (/)
+    resto = (%)
+    incrementar 1 = (++variable)
+    reduzir 1 = (--variable)
+  */
+
+/* ATRIBUIÇÃO
+
+    (+=) ------>	(x += 3) ----->	x = x + 3
+    (-=) ------>	(x -= 3) ----->	x = x - 3
+    (*=) ------>	(x *= 3) ----->	x = x * 3
+    (/=) ------>	(x /= 3) ----->	x = x / 3
+    (%=) ------>	(x %= 3) ----->	x = x % 3
+    (&=) ------>	(x &= 3) ----->	x = x & 3
+    (|=) ------>	(x |= 3) ----->	x = x | 3
+    (^=) ------>	(x ^= 3) ----->	x = x ^ 3
+    (>>=) ------>	(x >>= 3) ----->	x = x >> 3
+    (<<=) ------>	(x <<= 3) ----->	x = x << 3
+
+*/
+
+/* COMPARAÇÃO (returns 0 or 1)
+    (==) ------>	(equivalente a) ----->	x == y
+    (>=) ------>	(maior ou equivalente a) ----->	x >= y
+    (<=) ------>	(menor ou equivalente a) ----->	x <= y
+    (!=) ------>	(diferente) ----->	x != y
+    (>) ------>	(maior que ) ----->	x > y
+    (<) ------>	(menor que) ----->	x < y
+*/
+
+/* LOGICA
+    (&&) ------>	(and) -----> x < 5 && x < 10
+    (||) ------>	(or) ----->	x < 5 || x < 10
+    (!) ------>	(not using to reverse the returns) ----->	!(x < 5 && x < 10)
+
+ */
+
+//#include <cmath>
+// cout << max(10,5); will return 10
+// cout << min(10,5); will return 5
+// cout << sqrt(64); will return 8
+// cout << round(2.6); will return 3
+// cout << log(2); will retun 0.693147
+and many other functions
+
+
+
+}

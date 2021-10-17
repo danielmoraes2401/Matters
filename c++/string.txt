@@ -1,0 +1,21 @@
+string food = "Pizza";
+string &meal = food;
+
+
+// Agora, podemos usar o nome da variável <food> ou o nome de referência <meal> para nos referir à foodvariável:
+
+cout << food << "\n";  // Outputs Pizza
+cout << meal << "\n";  // Outputs Pizza
+
+// Achar o endereço de memoria da variavel
+/*
+PQ ?
+Referências e ponteiros (sobre os quais você aprenderá no próximo capítulo) são importantes em C ++, pois permitem 
+manipular os dados na memória do computador - o que pode reduzir o código e melhorar o desempenho .
+Esses dois recursos são uma das coisas que fazem o C ++ se destacar de outras linguagens de programação, como Python e Java .   */
+
+string food = "Pizza";
+
+cout << &food; // 
+
+Outputs 0x6dfed4

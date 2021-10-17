@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+void soma();
+void soma(int n1,int n2);
+
+int main() {
+  
+  soma();
+  soma(20, 30);
+
+  return 0;
+}
+
+void soma (int n1, int n2){
+  int resp;
+  resp = n1+n2;
+
+  cout << "Soma de " << n1 << " e " << n2 << " é igual à " << resp << endl;
+
+}
+
+
+
+void soma (){
+  int n1, n2, resp;
+  
+  n1 = 10;
+  n2 = 20;
+  resp = n1 + n2;
+
+  cout << "Soma de " << n1 << " e " << n2 << " é igual à " << resp << endl;
+}

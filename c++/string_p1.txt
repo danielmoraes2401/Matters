@@ -1,0 +1,49 @@
+// <string>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  //objeto txt da classe string
+  //txt = "Daniel Moraes";  outro modo
+  string txt("Daniel Moraes Costa Andrade");
+  cout << txt << endl << endl;
+
+  //utilizando iterator (begin e end)
+  cout << "FUNÇÕES DE ITERATOR: " << endl;
+  string::iterator it;
+  it = txt.begin()+7;
+  //cout << txt[7];
+  cout << *it << endl << endl;
+
+  //tamanho da string
+  cout << "TAMANHO DA STRING: " << endl;
+  cout << txt.size() << endl;
+  //txt.resize(num); = muda o tamanho da string
+  cout << txt.length() << endl << endl;
+
+  //resize da string
+  cout << "RESIZE: " << endl;
+  txt.resize(13);
+  cout << txt << endl << endl;
+  
+  //tamanho maximo da string
+  cout << "TAMANHO DA MAXIMO STRING: " << endl;
+  cout << txt.max_size() << endl << endl;
+  
+  //tamanho do espaço alocado da sting
+  cout << "CAPACITY: " << endl;
+  cout << txt.capacity() << endl;
+  txt.shrink_to_fit(); //limite minimo = 15
+  cout << txt.capacity() << endl << endl;
+
+  //limpa a string
+  cout << "CLEAR: " << endl;
+  txt.clear();
+  if (txt.empty()){
+    cout << "STRING VAZIA!" << endl;
+  } else {
+    cout << "STRING NÃO VAZIA!" << endl;
+  }
+  
+  return 0;
+}

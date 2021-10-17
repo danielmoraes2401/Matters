@@ -1,0 +1,33 @@
+//Serve para navegar dentro de uma coleção de dados
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<string>produtos = {"mouse","teclado", "monitor", "gabinete"};
+//criando o iterator   
+  vector<string>::iterator it;
+
+//it = produtos.end()-1; pega o ultimo elemento
+  it = produtos.begin();
+
+//avancando x posicao -> advance(it, 1);
+//avancando(direita) x posicao -> *next(it, 3);
+//retorna(esq) x posicao -> *prev(it, 3);
+  
+
+//printando o primeiro elemento do vector
+  cout <<produtos[0] << endl;
+
+  cout << *next(it, 2) << endl;
+
+//utilizando iterator para printar  
+  cout << *it << endl;
+
+//imprimir todos os elementos (normalmente determina o iterator no for)
+  for (vector<string>::iterator it = produtos.begin(); it!=produtos.end(); it++){
+    cout << *it << endl;
+  }
+
+  return 0;
+}

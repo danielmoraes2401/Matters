@@ -1,0 +1,58 @@
+//alternativa de array
+#include <iostream>
+using namespace std;
+#include <vector>
+
+int main() {
+//criando um vector do tipo int com o nome "numeros"
+// pode criar com um tamanho pre definido: numeros(5);
+// pode definir um vector assim -> vector<String>produtos = {"a", "b", "c"};  
+
+vector<int> num1;
+  vector<int> num2;
+  int tam1, i;
+
+//adicionando elementos manualmente
+// numeros.push_back(valor);
+  num1.push_back(10);
+  num1.push_back(20);
+  num1.push_back(30);
+
+
+// inserir elemento em um vector 
+//OBS:. begin()+1 or end()-1
+
+  num1.insert(num1.begin(), 88);
+
+// remover um elmento vector.erase(vector.end();/begin()-1;)
+
+// mudando o valor de uma posicao do vector
+  num1[1] = 25;
+
+//printar o primeiro e ultimo elemento e algum elemento especifico
+  cout << num1.front() << "\n\n";
+  cout << num1.back() << "\n\n";
+  cout << num1.at(2) << "\n\n";
+
+//vector 2
+  num2.push_back(40);
+  num2.push_back(50);
+  tam1 = num1.size();
+  cout << tam1 <<"\n\n";
+
+//printando os valores do vector
+  for (i=0; i < tam1; i++){
+    cout << num1[i] << " ";
+  }
+
+// trocar os valores de dois vectors
+//  num1.swap(num2);
+
+// retirando elementos
+  while (!num1.empty()){
+    num1.pop_back();
+  }
+  cout << "\n\n" << num1.size();
+  
+  return 0;
+}

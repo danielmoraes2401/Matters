@@ -1,0 +1,18 @@
+//ALGORITMO FOR_EACH 
+// RECEBE 3 PARAMETROS: a posicao inicial, final e a função que vai operar esses elementos
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main(){
+  vector <int> n {0,1,2,3,4,5,6,7,8,9};
+
+
+//printando os elementos (não altera os elementos diretamente do vector)
+  for_each(n.begin(), n.end(), [](int num){
+    num = num + 10;
+    cout << num << endl;
+  });
+  return 0;
+}

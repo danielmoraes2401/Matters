@@ -1,0 +1,47 @@
+// C++ ENCAPSULAMENTO
+#include <iostream>
+#include <memory>
+using namespace std;
+
+class Carro {
+//so pode ser chamado dentro da propria classe
+private:
+  int velMax;
+//protegi o set para n ser chamado fora da classe  
+  void setVelMax (int vm){
+    velMax = vm;
+  }
+
+public:
+  int potencia;
+  const char* nome;
+ 
+
+  int getVelMax(){
+    return velMax;
+  }
+
+  Carro (const char* n, int p):nome(n), potencia(p){
+    if (p < 100){
+      velMax = 120;
+    
+    } else if (p < 200){
+      this -> setVelMax(220);
+    
+    }else{
+      this -> velMax = 350;
+    }
+  }
+      
+};
+
+int main(){
+
+  Carro c1{"Daniel", 70};
+  Carro c2{"Bruno", 400};
+
+  cout << c1.nome << " - " << c1.potencia << " - " << c1.getVelMax() << endl;
+  cout << c2.nome << " - " << c2.potencia << " - " << c2.getVelMax() << endl;
+
+  return 0;
+}

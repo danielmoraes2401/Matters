@@ -1,0 +1,40 @@
+// C++ ARMAZENAR DADOS EM PARES
+#include <iostream>
+#include <utility>
+#include <vector>
+using namespace std;
+
+int main(){
+// pair com codigo descrição e preço
+// vector utilizando pair
+  const int tam = 3;
+  vector <pair <int, string>> prod; 
+
+  pair <int, pair <string, double> > produtos[tam];
+
+//adicionando produtos
+  produtos[0] = make_pair(10, make_pair("Mouse", 150.99));
+  produtos[1] = make_pair(10, make_pair("Teclado", 250.99));
+  produtos[2] = make_pair(10,  make_pair("MousePad", 99.99));
+
+//adicionadno no prod
+  prod.push_back(make_pair(10,"fruta"));
+  prod.push_back(make_pair(20,"vegetal"));
+  prod.push_back(make_pair(30,"camisa"));
+  prod.push_back(make_pair(40,"molho"));
+
+
+// printando produtos
+  cout << "\n\n" << "PRODUTOS:" << "\n\n"; 
+  for (int i = 0; i < 3; i++){
+  cout << "Produto " << i+1 << ": " << produtos[i].second.first << " - " << produtos[i].second.second << "$ - " << produtos[i].first << " qtd" << endl;
+  }
+
+//printando prod
+  cout << "\n\n" << "PROD:" << "\n\n"; 
+  for (auto i:prod){
+    cout << i.first << " - " << i.second << endl;
+  }
+
+  return 0;
+}

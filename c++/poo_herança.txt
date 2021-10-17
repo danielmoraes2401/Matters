@@ -1,0 +1,117 @@
+INT MAIN
+
+#include <iostream>
+#include "classes.h"
+using namespace std;
+
+int main() {
+  Moto *v1 = new Moto();
+  Carro *v2 = new Carro();
+  Tanque *v3 = new Tanque();
+  
+  v1 -> imprimirDados();
+  v2 -> imprimirDados();
+  v3 -> imprimirDados();
+
+  return 0;
+}
+
+----------------------------------------------------------------------------------------
+
+CLASSES.H
+
+#ifndef CLASSES_H_INCLUDED
+#define CLASSES_H_INCLUDED
+using namespace std;
+class Veiculo {
+  public:
+    int vel;
+    int blind;
+    int rodas;
+    void setTipo(int tp);
+    void setVelMax (int vm);
+    void setArma (bool ar);
+    void imprimirDados();  
+  private:
+    int tipo; //1 = MOTO, 2 = CARRO, 3 = TANQUE
+    int velMax;
+    bool arma;  
+}; 
+
+//criando os metodos sets dos elementos privados
+void Veiculo::setTipo(int tp){
+  tipo = tp;
+}
+void Veiculo::setVelMax (int vm){
+  velMax = vm;
+}
+void Veiculo::setArma (bool ar){
+  arma = ar;
+}
+
+//imprimindo dados (consegue imprimir os elementos privados dessa forma, caso queira imprimir externamente necessariamente seria essencial criar o metodos get para os elementos privados)
+void Veiculo::imprimirDados(){
+  cout << "Tipo Veiculo: " << tipo << endl;
+  cout << "Vel Máxima: " << velMax << " KM/H" << endl;
+  cout << "Qtde de rodas: " << rodas << endl;
+  cout << "Blindagem: " << blind << endl;
+  cout << "Armamento: " << arma << endl;
+  cout << "Velocidade Atual: " << vel << " KM/H" <<  endl;
+  cout << "---------------------------------------------------------------" << endl;
+
+}
+
+//criando uma nova classe com as propriedades do Veiculo
+class Moto:public Veiculo { 
+  public:
+    Moto();
+
+};
+
+//criando a classe carro q vai herdar os elementos de Veiculo
+
+class Carro:public Veiculo {
+  public:
+    Carro();
+};
+
+//criando a classe tanque q vai herdar os elementos de Veiculo
+
+class Tanque:public Veiculo {
+  public:
+    Tanque();
+};
+
+//construtor da classe Tanque
+Tanque::Tanque(){
+  vel = 0;
+  blind = 4;
+  rodas = 8;
+  setTipo(3);
+  setVelMax(200);
+  setArma(true);  
+}
+
+
+
+//construtor da classe Carro
+Carro::Carro(){
+  vel = 0;
+  blind = 0;
+  rodas = 4;
+  setTipo(2);
+  setVelMax(180);
+  setArma(false);  
+}
+
+//construtor da classe Moto
+Moto::Moto(){
+  vel = 0;
+  blind = 0;
+  rodas = 2;
+  setTipo(1);
+  setVelMax(120);
+  setArma(false);
+}
+
+#endif

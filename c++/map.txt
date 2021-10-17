@@ -1,0 +1,53 @@
+//MAP (ASSOCIAÇÃO CHAVE E VALOR)
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main(){
+//criando o map (chave e valor) e o iterator para procurar produto
+  map <int,string>::iterator itmap;
+  map <int,string> prod;
+
+//inserindo os valores [0] na forma de int pq defini antes q é int
+  prod[29219] = "Mouse";
+  prod.insert(pair <int,string> (102940,"Teclado"));
+  prod[402803] = "Monitor";
+  prod.insert(pair <int,string> (358929,"Cx.Som"));
+
+//encontrando produto pela chave
+  cout << '\n' << "PROCURANDO: " << "\n\n";
+  itmap = prod.find(358929);
+  if (itmap == prod.end()){
+    cout << "Produto não encontrado!!" << endl;
+  
+  } else {
+    cout << "Produto em estoque!!" << endl;
+    cout << "CODIGO: " << itmap -> first << "\nPRODUTO: " << itmap -> second << endl;
+  }
+  
+//deletando produto pela chave
+  cout << '\n' << "DELETANDO: " << "\n\n";
+  prod.erase(402803);
+//OBS:. prod.erase(prod.begin(),prod.find(402803))
+
+//prod.clear(); - limpa o map
+
+//printando valores
+cout << '\n' << "PRINTANDO PRODUTOS: " << endl;
+  for (auto i:prod){
+    cout << i.first << " - " << i.second << endl;
+  }
+
+
+//OUTRAS FORMAS
+
+/*for (int i = 0; i < 4;i++){
+    cout << prod[i] << endl; 
+  } */
+  
+  /*for (auto it = prod.begin();it!=prod.end();it++){
+    cout << it->second << endl; 
+  }*/
+
+  return 0;
+}

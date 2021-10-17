@@ -1,0 +1,34 @@
+// C++ ARMAZENAR DADOS EM PARES
+#include <iostream>
+#include <utility>
+using namespace std;
+
+int main(){
+//definindo o pair (poder ser classe, int, double, float, string, pair...) (pode adicionar direto)
+  pair <int,string> par1(19,"Daniel");
+  pair <int,string> par2;
+  pair <int,string> parVetor[3];
+
+//adicionando dps
+  par2.first = 50; par2.second = "Fernanda";
+
+//adicioandno no parVetor
+  parVetor[0].first = 0;
+  parVetor[0].second = "Olá";
+
+  parVetor[1] = make_pair(1,"Tudo Bom?");
+  parVetor[2] = make_pair(2,"Tudo!");
+
+//printando pares
+  cout  << "Pares:" << "\n\n";
+  cout << par1.first << " - " << par1.second <<endl;
+  cout << par2.first << " - " << par2.second <<endl;
+
+// printando vetor
+  cout << "\n\n" << "VETOR:" << "\n\n"; 
+  for (int i = 0; i < 3; i++){
+    cout << parVetor[i].first << " - " << parVetor[i].second << endl;
+  }
+
+  return 0;
+}

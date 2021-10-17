@@ -1,0 +1,58 @@
+// <string>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  string txt("Daniel Moraes");
+  cout << txt << endl << endl;
+
+  //find (retorna o primeiro caracter da palavra que vocÊ quer encontrar)
+  cout << "FIND: " << endl;
+  //inves do size_t poderia ser int, mas se não tiver na string vai retornar o valor maximo de um elemento do tipo size_t
+  size_t encontrado = txt.find("raes");
+  if (encontrado != string::npos){
+    cout << "Encontrado: " << encontrado << endl;
+  } else {
+    cout << "Não tem!" << endl;
+  } cout << endl;
+
+  //retorna uma nova string de acordo com uma posicao indicado
+  cout << "SUBSTR: " << endl;
+  string txt2;
+  txt2 = txt.substr(0,6);
+  cout << txt2 << endl << endl;
+
+  //comparar 2 strings
+  cout << "COMPARE: " << endl;
+  if (txt.compare(txt2) == 0){
+    cout << "strings iguais" << endl;
+
+  } else {
+    cout << "strings diferentes!" << endl;
+  
+    } if (txt.compare(txt2) > 0){
+      cout << "txt > txt2!" << endl;
+
+    } else {
+      cout << "txt < txt2!" << endl;
+    } cout << endl;
+
+  /*conversão
+  stoi
+  to_string 
+  stol
+  stoll
+  stoul
+  stoull
+  stof
+  stod
+  stold
+  */
+  cout << "CONVERSÃO: " << endl;
+  string txt3("18"), txt4;
+  int ano = 2018, resultado;
+  resultado = ano - stoi(txt3);
+  cout << resultado << endl << endl;
+ 
+  return 0;
+}

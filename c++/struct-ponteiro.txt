@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+struct Carro {
+  string nome;
+  string cor;
+  int pot;
+  int velMax;
+  int vel;
+
+  void insere(string stnome, string     stcor, int stpot, int stvelMax){
+    nome = stnome;
+    cor = stcor;
+    pot = stpot;
+    velMax = stvelMax;
+    vel = 0;
+  }
+
+  void mostra(){
+    cout << endl << "Nome do carro: " << nome << endl;
+    cout << "Cor: " << cor << endl;
+    cout << "Potência: " << pot << " cavalos" << endl;
+    cout << "Velociade atual: " << vel << " KM" << endl;
+    cout << "Vel Maxima: " << velMax << " KM" << endl;
+  }
+
+  void mudaVel(int novaVel){
+    vel = novaVel;
+    if (vel > velMax){
+      vel = velMax;
+    }
+
+    if (vel < 0){
+      vel = 0;
+    }
+  }
+};
+
+int main() {
+  /* criando ponteiro carros*/
+  Carro *carros= new Carro[4]; 
+  Carro car1,car2,car3,car4;
+
+/*defininho a posicao de cada ponteiro */
+  carros[0] = car1; carros[1] = car2; carros[2] = car3; carros[3] = car4;
+
+/*funcao insere nas posicoes do ponteiro */
+  carros[0].insere("Celta", "Azul", 100, 180);
+  carros[1].insere("BMW", "Vermelho", 450, 350);
+  carros[2].insere("Polo", "Branco", 150, 220);
+  carros[3].insere("Palio", "Cinza", 100, 190);
+
+/*mostrando os dados da posicção 3 do ponteiro carros */
+  carros[3].mostra();
+
+/*mostrar a info de todos os carros */
+
+  for (int i=0; i < 4; i++){
+    carros[i].mostra();
+  }
+
+
+  return 0;
+}

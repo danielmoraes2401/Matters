@@ -1,0 +1,83 @@
+// <string>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  string txt("Daniel Moraes");
+  cout << txt << endl << endl;
+  int tam = txt.size();
+
+  //acesso de posição
+  cout << "ACESSO POSIÇÃO: " << endl;
+  cout << txt[8] << endl;
+  cout << txt.at(8) << endl << endl;
+
+  //printando letras
+  cout << "PRINTANDO LETRAS: " << endl;
+  for(int i = 0; i < tam;++i){
+    cout << txt[i] << endl;
+  }  cout << endl;
+  /*
+  for(int i:txt){
+    cout << i << endl;
+  }cout << endl;
+  */
+
+  //funcao back (ultimo elemento)
+  cout << "FUNÇÃO BACK: " << endl;
+  //pode mudar a ultima letra -> txt.back() = "O";
+  cout << txt.back() << endl << endl;
+
+  //funcao front (ultimo elemento)
+  cout << "FUNÇÃO FRONT: " << endl;
+  //pode mudar a ultima letra -> txt.front() = "O";
+  cout << txt.front() << endl << endl;
+
+  //concatenando (append e +=)
+  cout << "CONCATENANDO: " << endl;
+  string resto = " Costa";
+  txt += resto;
+  cout << txt << endl;
+  txt.append(" Andrade");
+  cout << txt << endl << endl;   
+
+  //adiciona caracter no final
+  cout << "PUSH BACK: " << endl;
+  txt.push_back('!');
+  cout << txt << endl << endl; 
+  
+  //remove caracter no final
+  cout << "POP BACK: " << endl;
+  txt.pop_back();
+  cout << txt << endl << endl;
+
+  //substitui o conteudo da string
+  cout << "ASSIGN: " << endl;
+  txt.assign("Danigol Moraes");
+  cout << txt << endl << endl;
+
+  //insere um conteudo em uma posição especifica (não substitui)
+  cout << "INSERT: " << endl;
+  txt.insert(4,"Olá");
+  cout << txt << endl << endl;  
+
+  //apagar o conteudo da string
+  cout << "ERASE: " << endl;
+  txt.erase(3,3); // 3 caracteres a partir da posição 3
+  cout << txt << endl << endl;
+
+  //substitui uma parte do conteudo da string
+  cout << "REPLACE: " << endl;
+  string txt2 = "Daniel";
+  txt.replace(0,8,txt2); // da posição 0 até a 8 substitui isso 
+  cout << txt << endl << endl;
+
+  //troca de string
+  cout << "SWAP: " << endl;
+  string txt3 = "Mudou";
+  txt.swap(txt3);
+  cout << txt << endl << endl;
+
+
+  return 0;
+}

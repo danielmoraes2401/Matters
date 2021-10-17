@@ -1,0 +1,56 @@
+// <set>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  set <int> st1 = {9,1,0,2,8,3,7,4,6,5};
+  set <int>::iterator it;
+  
+  cout << "PRINTANDO DE FORMA ORDENADA: " << endl;
+  for (int x:st1){
+    cout << x << "-";
+  } cout << endl << endl;
+
+  cout << "INSERT: " << endl;
+  set <int> st2 = {50,90,30,80,20,70,60};
+  it = st2.begin();
+  st2.insert(it,50);
+  it = st2.end();
+  st2.insert(it,10);
+  it = ++ ++ ++ st2.begin();
+  st2.insert(it,90);
+  
+  for (int x:st2){
+    cout << x << "-";
+  } cout << endl << endl;
+
+  cout << "EMPLACE_HINT: " << endl;
+  set <int> st6 = {9,1,0,2,8,3,7,4,6,5};
+  it = st6.begin();
+  st6.emplace_hint(st6.begin(),10);
+
+  for (int x:st6){
+    cout << x << "-";
+  } cout << endl << endl;
+
+  cout << "FIND: " << endl;
+  set <int> st7 = {9,1,0,2,8,3,7,4,6,5};
+  it = st7.find(20);
+  cout << *it << endl << endl;  //*it retorna o numero, se n tiver, retorna o numero de elementos
+
+  cout << "COUNT: " << endl;
+  set <int> st8 = {9,1,0,2,8,3,7,4,6,5};
+  if (st8.count(10)!= 0){
+    cout << "Está no container!" << endl;
+  } else {
+    cout << "Não está no container!" << endl;
+  } cout << endl;
+
+  cout << "LOWER_BOND/UPPER_BOND: " << endl;
+  set <int> st9 = {9,1,0,2,8,3,7,4,6,5};
+  it = st9.lower_bound(2);
+  cout << *it << endl << endl; //*it retorna o numero, se n tiver, retorna o numero de elementos
+
+
+  return 0;
+}

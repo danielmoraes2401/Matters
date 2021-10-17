@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+for (statement 1; statement 2; statement 3) {                  A instrução 1 é executada (uma vez) antes da execução do bloco de código.
+
+// code block to be executed                 	               A instrução 2 define a condição para executar o bloco de código.
+
+                                                               A instrução 3 é executada (todas as vezes) após a execução do bloco de código.
+}
+                                                   
+
+EXAMPLE:
+
+int main() {
+  for (int i = 0; i <= 10; i = i + 2) {
+    cout << i << "\n";
+  }
+  return 0;
+}
+
+  
+OUTPUT:
+0
+2
+4
+6
+8
+10
+
+//OUTRA FORMA
+
+  int x[10]{0,1,3,4,5,6,7,8,9,10};
+  
+  for (int i:x){
+    cout << i << endl;
+  }

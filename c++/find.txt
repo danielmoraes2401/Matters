@@ -1,0 +1,88 @@
+//ALGORITMO FIND (inicio, fim, produto procurado)
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <list>
+#include <map>
+#include <string>
+using namespace std;
+
+int main(){
+// Por Array
+  int vetor[] = {5,2,7,2,3,6,9};
+  int*p;
+  size_t tam=sizeof vetor/4;
+  p = find(vetor, vetor+tam, 6);
+  cout << "VETOR\n";
+  if (p != vetor+tam){
+    cout << "Produto encontrado: " << *p << endl; 
+  } else {
+    cout << "Numeral NÃO encontrado" << endl;
+  }
+
+//Pelo Vector
+  vector<int>num = {5,2,7,2,3,6,9};
+  auto it = find(num.begin(), num.end(), 7);
+  cout << "\nVECTOR\n";
+  if (it != num.end()){
+    cout << "Numeral encontrado: " << *it << endl; 
+  } else {
+    cout << "Numeral NÃO encontrado" << endl;
+  }
+
+//Por List
+  list<int>num2 = {5,2,7,2,3,6,9};
+  auto it2 = find(num2.begin(), num2.end(), 5);
+  cout << "\nLIST\n";
+  if (it2 != num2.end()){
+    cout << "Numeral encontrado: " << *it2 << endl; 
+  } else {
+    cout << "Numeral NÃO encontrado" << endl;
+  }
+
+//Por map (não identifica o incio e fim)
+  cout << "\nMAP\n"; 
+  map<char,int> mapa;
+  mapa['a'] = 10; mapa['b'] = 33; mapa['c'] = 25;
+  auto it4 = mapa.find('c');
+  
+  if (it4 != mapa.end()){
+    cout << "chave encontrada: " << it4 -> second << endl; 
+  } else {
+    cout << "Chave NÃO encontrada" << endl;
+  }
+
+//Por string 
+  cout << "\nSTRING\n"; 
+  string texto = "Daniel Moraes Costa Andrade";
+  //vai dizer a primeira posicão da palavra
+  size_t enc = texto.find("Moraes");
+
+  if (enc != string::npos){
+    cout << "Palavra encontrada: " << enc << endl; 
+  } else {
+    cout << "Palavra NÃO encontrada" << endl;
+  }  
+
+//Verificando vector adicionando
+  cout << "\nADD NUM\n";
+  vector<int>numeros;
+  vector<int>::iterator iter;
+  int escolha, qtde = 10;
+  while (qtde > 0){
+    cout << "Digite um numeral: ";
+    cin >> escolha;
+    auto it3 = find(numeros.begin(), numeros.end(), escolha);
+    
+    if (it3 != numeros.end()){
+      cout << "Numeral já existe!" << endl;
+   
+    } else {
+      cout << "Número inserido" << endl;
+      numeros.push_back(escolha);
+      qtde--;
+    }
+  }
+
+  return 0;
+}

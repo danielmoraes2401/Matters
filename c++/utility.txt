@@ -1,0 +1,28 @@
+// <utility>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+  int a,b;
+  a = 10;
+  b = 5;
+  //swap() - trocar valor
+  swap(a,b);
+  cout << "Valor de a: " << a << " - Valor de b: " << b << endl << endl;
+  
+  //pair() / make_pair() - fazer pares
+  int p;
+  pair <int,int> par1;
+  pair <int,char> par2;
+  pair <int,string> par3;
+
+  par1 = make_pair(10,20);
+  par2 = make_pair(30,'A');
+  par3 = make_pair(40,"Olá");
+
+  cout << "Par 1: " << par1.first << " - " << par1.second << endl;
+  cout << "Par 2: " << par2.first << " - " << par2.second << endl;
+  cout << "Par 3: " << par3.first << " - " << par3.second << endl;
+
+  return 0;
+}

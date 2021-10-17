@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  while (codition){
+    //code to be executed when it continues been true
+}
+
+  }
+
+EXAMPLE:
+int main() {
+  int i = 0;
+  while (i < 5) {
+    cout << i << endl;
+    i++;
+  }
+  return 0;      
+
+}
+ 
+OUTPUT:
+0
+1
+2
+3
+4
+
+
+You can use DO/WHILE.
+This loop will execute the code block once, before checking if the condition is true, 
+then it will repeat the loop as long as the condition is true.
+
+do {
+  // code block to be executed
+}
+while (condition);
+
+EXAMPLE:
+
+int main() {
+  int i = 0;
+  do {
+    cout << i << endl;
+    i++;
+  }
+  while (i < 5);
+  return 0;
+}
+
+OUTPUT: THE SAME
+
+
+
+

@@ -1,0 +1,23 @@
+//tratamento de erros
+#include <iostream>
+#include <vector>
+#include <stdexcept>
+
+using namespace std;
+
+int main() {
+
+  try{
+    vector<int> numeros(5);
+
+//vai dar erro pq n tem posicao 7 (mas o programa n para pq esta dentro do bloco try)   
+    numeros.at(7) = 10;
+
+  } catch (exception& erro) {
+//mensagem de erro (retornando a mensagem de erro)    
+    cout << "ERRO: " << erro.what() << endl;
+
+  }
+
+  return 0;
+}

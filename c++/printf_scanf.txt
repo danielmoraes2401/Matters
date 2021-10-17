@@ -1,0 +1,36 @@
+// impressao e leitura de dados do teclado
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main() {
+//forma de impressão
+  printf("Olá\n\n");
+  cout << "Olá" << endl <<endl;
+
+ //imprimir um valor de uma variavel
+  int num1, num2, num3;
+  num1=100; num2=200; num3=300;
+
+  char nome[10]="Daniel";
+  char name[10];
+  
+  //input automatico que determina a variavel
+  scanf("%d %s",&num1,&name);
+
+  printf("Valor da variável num1, num2 e num3: %d, %d, %d. \n\n",num1,num2,num3);
+  
+  printf("Valor da variavel nome: %s %s.\n\n",nome, name);
+
+  return 0;
+}
+
+/*
+d,i => int
+x,X => int hexadecimais
+u => int sem sinal 
+c => char[](string)
+char => caracter;
+f => float(double)
+p => ponteiros
+*/

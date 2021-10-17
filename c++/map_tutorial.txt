@@ -1,0 +1,81 @@
+// <map>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  map <char,string> mp;
+  map <char,string>::iterator it;
+  mp['a'] = "Branco";
+  mp['b'] = "Preto";
+  mp['c'] = "Vermelho";
+  mp['d'] = "Verde";
+  mp['e'] = "Azul";
+
+  cout << "PRINTANDO ELEMENTOS: " << endl;
+  for (auto i:mp){
+    cout << i.first << " - " << i.second << endl;
+  } cout << endl;
+
+  cout << "TAMANHO DO MAP: " << endl;
+  cout << mp.size() << endl;
+  cout << mp.max_size() << endl << endl;
+
+  cout << "ACESSO DO MAP: " << endl;
+  cout << mp['a'] << endl;
+  cout << mp.at('a') << endl << endl;
+
+  cout << "INSERT: " << endl;
+  mp.insert(pair<char,string>('f',"Marrom"));
+  cout << mp['f'] << endl << endl;
+
+  cout << "EMPLACE_HINT: " << endl;
+  mp.emplace_hint(mp.end(),'g',"Amarelo");
+  cout << mp['g'] << endl << endl;
+
+  cout << "FIND: " << endl;
+  it = mp.find('f');
+  if (it == mp.end()){
+    cout << "Cor não encontrada!!" << endl;
+  
+  } else {
+    cout << "CODIGO: " << it -> first << "\nCOR: " << it -> second << endl;
+  } cout << endl;
+
+  cout << "ERASE: " << endl << endl;
+  mp.erase('g');
+  //OBS:. prod.erase(prod.begin(),prod.find(402803))
+
+  cout << "CLEAR:" << endl;
+  map <char,string> mp2;
+  mp2['k'] = "Branco";
+  mp2.clear();
+  cout << endl;
+
+  cout << "SWAP: " << endl;
+  mp2.swap(mp);
+  for (auto i:mp2){
+    cout << i.first << " - " << i.second << endl;
+  } cout << endl;
+
+  cout << "EMPTY:" << endl;
+  if (mp.empty()){
+    cout << "MAP vazio!" << endl;
+  } else {
+    cout << "MAP não vazio!" << endl;
+  } cout << endl; 
+
+  cout << "COUNT:" << endl;
+  if(mp2.count('b')!= 0){
+    cout << "A chave b está no map!" << endl;
+  } cout << endl;
+
+  cout << "LOWER_BOUND" << endl;
+  it = mp2.lower_bound('b');
+  mp2.erase(it);
+  for (auto i:mp2){
+    cout << i.first << " - " << i.second << endl;
+  } cout << endl;
+
+
+  return 0;
+}

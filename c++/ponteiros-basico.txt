@@ -1,0 +1,24 @@
+/* ARMAZENA O ENDEREÇO DE UMA VARIAVEL QUE ELES ESTÁ APONTANDO*/
+#include <iostream>
+using namespace std;
+
+int main() {
+  string veiculo = "Carro";
+// criando um ponteiro pv
+  string *pv;
+
+// ponteiro pv recebe o endereço da variavel veiculo
+  pv = &veiculo;
+
+  // printando o endereço da memoria da variavel
+  cout << pv << endl;
+  cout << &veiculo << endl;
+
+  *pv = "Moto"; //No endereço apontado por *pv, adicione o valor moto
+
+//variavel mudou mas o endereço não
+  cout << veiculo << endl;
+  cout << pv;
+  
+  return 0;
+}

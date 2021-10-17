@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+  
+  double n1,n2,resul;
+  char op;
+
+  inicio: //GOTOOOOO
+  system("clear/cls"); // LIMPAR A TELA
+  
+  cout << "Digite a nota 1: ";
+  cin >> n1;
+  cout << "Digite a nota 2: ";
+  cin >> n2;
+  
+  resul = (n1+n2)/2;
+
+  if (resul >= 7.0){
+    cout << "Aluno Aprovado!" << endl << endl;
+
+  }else if(res>=40 && res<70){
+    cout << "Aluno Recuperação!" << endl << endl;
+  }else{
+    cout << "Aluno Reprovado!" << endl << endl;
+  }
+
+  cout << "Deseja refazer? [s/n]";
+  cin >> op;
+
+  if (op == 's' or op == 'S'){
+    cout << endl;
+    
+    goto inicio;  // GOOOOOOOOOTOOOOOOOOOOOOOO
+  }
+
+
+}

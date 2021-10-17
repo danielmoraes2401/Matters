@@ -1,0 +1,110 @@
+CLASSES.H
+
+#ifndef CLASSES_H_INCLUDED
+#define CLASSES_H_INCLUDED
+using namespace std;
+
+
+class Veiculo {
+  public:
+    int vel;
+    int tipo;
+    Veiculo(int tp);
+    int getVelMax();
+    bool getLigado();
+    void setLigado(int l);
+
+//so pode ser manipulados pela propria classe (precisa criar um metodo pra instaciar os elementos)
+  private:
+  int velMax;
+  string nome;
+  bool ligado;
+  void setVelMax(int vm);
+};
+
+//metodo para retornar a velocidade maxima (get utiliza int/bool/string e não void)
+bool Veiculo::getLigado(){
+  return ligado;
+}
+
+int Veiculo::getVelMax(){
+  return velMax;
+}
+
+//criando o metodo para alterar a velocidade maxima
+void Veiculo::setVelMax(int vm){
+  velMax = vm;
+}
+
+void Veiculo::setLigado(int l) {
+  if (l == 1) {
+    ligado = true;
+  
+  } else if (l == 0) {
+    ligado = false;
+  }
+}
+
+//1 = carro, 2 = aviao e 3 = navio
+Veiculo::Veiculo(int tp){
+  if (tp == 1) {
+    nome = "Carro";
+    velMax = 200;
+    ligado = false;
+    vel = 0;
+
+  } else if (tp == 2) {
+    nome = "Avião";
+    velMax = 800;
+    ligado = false;
+    vel = 0;
+
+  } else if (tp == 3) {
+    nome = "Navio";
+    velMax = 120;
+    ligado = false;
+    vel = 0;
+  
+  }
+
+}
+
+#endif
+
+-----------------------------------------------------------------------------------------
+MAIN.CPP
+
+#include <iostream>
+#include "classes.h"
+using namespace std;
+
+int main() {
+  Veiculo *v1 = new Veiculo(1);
+  Veiculo *v2 = new Veiculo(2);
+  Veiculo *v3 = new Veiculo(3);
+ 
+ /* consigo alterar a velocidade por que ele é um elemento publico (se fosse privado, nao conseguiria nem mudar nem dar cout (apenas com os metodos get e set para mudar um elemento privado)) */
+  cout << "A velocidade atual é:....." << v1 -> vel << endl;
+
+// carro está em false
+  cout << "O carro está ....." << v1 -> getLigado() << endl;
+
+//mudei a velocidade e disse que ele ligou
+  v1 -> vel = 120;
+  v1 -> setLigado(1);
+
+  cout << "A velocidade atual é:....." << v1 -> vel << endl;
+
+  cout << "A velocidade máxima: " << v1 -> getVelMax() << endl;
+  cout << "A velocidade máxima: " << v2 -> getVelMax() << endl;
+  cout << "A velocidade máxima: " << v3 -> getVelMax() << endl;
+
+  if (v1 -> getLigado()){
+    cout << "Carro Ligado" << endl;
+  
+  } else {
+    cout << "Carro desligado" << endl;
+  }
+
+  return 0;
+}

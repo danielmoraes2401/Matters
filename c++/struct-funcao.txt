@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+struct Carro {
+
+/*criando proprieades*/
+  string nome;
+  string cor;
+  int pot;
+  int velMax;
+  int vel;
+
+/* funcao para inserir os dados*/
+  void insere(string stnome, string stcor, int stpot, int stvelMax){
+    nome = stnome;
+    cor = stcor;
+    pot = stpot;
+    velMax = stvelMax;
+    vel = 0;
+  }
+/* funcao para mostrar os dados*/
+  void mostra(){
+    cout << "Nome do carro: " << nome << endl;
+  cout << "Cor: " << cor << endl;
+  cout << "Potência: " << pot << " cavalos" << endl;
+  cout << "Velociade atual: " << vel << " KM" << endl;
+  cout << "Vel Maxima: " << velMax << " KM" << endl;
+  }
+
+/*funcao para mudar a velocidade*/
+  void mudaVel(int novaVel){
+    int vel = novaVel;
+    if (vel > velMax){
+      vel = velMax;
+    }
+
+    if (vel < 0){
+      vel = 0;
+    }
+  }
+};
+
+int main() {
+  Carro car1, car2, car3, car4;
+
+  car1.insere("Celta", "Azul", 100, 180);
+  car2.insere("BMW", "Branco", 450, 350);
+  car3.insere("Polo", "Amarelo", 140, 200);
+  car4.insere("Palio", "Vermelho", 100, 175);
+
+/*Mostra os dados do carro */
+  car1.mostra();
+      
+  return 0;
+}

@@ -1,0 +1,57 @@
+AVIAO.H
+
+#ifndef AVIAO_H INCLUDED
+#define AVIAO_H INCLUDED
+
+class Aviao {
+  public: 
+  int vel = 0;
+  int velMax;
+ //nao usei o using name 
+  std::string tipo;
+  Aviao(int tp);
+  void Imprimir();
+
+  private:
+
+};
+// metodo construtor chamado automaticamente
+Aviao::Aviao(int tp){
+  if (tp == 1) {
+    velMax = 800;
+    tipo = "Jato";
+  
+  }else if(tp == 2){
+    velMax = 350;
+    tipo = "Monomotor";
+  
+  } else if (tp == 3){
+    velMax = 180;
+    tipo = "Planador";
+  }
+}
+
+void Aviao::Imprimir(){
+  std::cout << "Tipo:..... " << tipo << std::endl;
+  std::cout << "Vel Máxima:..... " << velMax << std::endl;
+  std::cout << "Vel Atual:..... " << vel << std::endl;
+
+}
+
+#endif
+-----------------------------------------------------------------------------------------
+MAIN.CPP
+
+#include <iostream>
+#include "Aviao.h"
+using namespace std;
+
+int main() {
+  Aviao *av1 = new Aviao(1);
+  Aviao *av2 = new Aviao(2);
+  Aviao *av3 = new Aviao(3);
+
+  av1 -> Imprimir();
+  
+  return 0;
+} 

@@ -1,0 +1,37 @@
+// C++ MODERNO
+#include <iostream>
+#include <memory>
+using namespace std;
+
+class Carro {
+public:
+  int velMax;
+  int potencia;
+  const char* nome;
+
+//criando o contrutor (pode usar this ou não)
+//utilizando lista de inicialização
+  Carro (const char* n, int p):nome(n), potencia(p){
+    if (p < 100){
+      velMax = 120;
+    
+    } else if (p < 200){
+      this -> velMax = 220;
+    
+    }else{
+      this -> velMax = 350;
+    }
+  }
+      
+};
+
+
+int main(){
+// unique_ptr <Carro> c1 (new Carro {"Daniel", 85}); -> inves de .
+  Carro c1{"Daniel", 70};
+
+//imprimindo dados   
+  cout << c1.nome << " - " << c1.potencia << " - " << c1.velMax << endl;
+
+  return 0;
+}

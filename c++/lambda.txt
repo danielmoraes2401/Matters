@@ -1,0 +1,38 @@
+// Funcões lambdas
+// () = parametros
+// {} = função
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int main() {
+  auto maior = [](int n1, int n2) -> int{
+// if ternário    
+    return (n1>n2)?n1:n2;
+  };
+
+  cout << maior(6,5) << endl;
+
+  auto maior2 = [](vector<int>n) -> int{
+    auto m = 0;
+    for (int x:n){
+      m = (m > x) ? m:x;
+    }
+    return m;
+  };
+
+  cout << maior2({9,2,1,4,1,2,5,7,10}) << endl;
+
+  int x1, x2, x3, x4;
+  x1 = 10; x2 = 5; x3 = 3; x4 = 2;
+  
+// se colocar [=] ele usa todas as variaveis do scopo
+  auto soma = [x1,x2,x3,x4]() -> int{
+    return x1 + x2 + x3 + x4;
+  };
+
+  cout << soma() << endl;
+
+  return 0;
+}

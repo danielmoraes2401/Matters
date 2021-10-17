@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int num = 20;
+    cout << num;
+}
+
+/* VARIABLES RULES
+Os nomes podem conter letras, dígitos e sublinhados
+Os nomes devem começar com uma letra ou um sublinhado (_)
+Os nomes diferenciam maiúsculas de minúsculas ( 'myVar' e 'myvar' são variáveis diferentes)
+Os nomes NÃO podem conter espaços em branco ou caracteres especiais como!, #,% Etc.
+Palavras reservadas (como palavras-chave C ++, como int) não podem ser usadas como nomes
+*/
+
+
+/*
+OUTRO JEITO DE VARIÁVEL
+int num2;
+num2 = 15;
+cout << num2;
+
+/*
+DECLARAR MULTI VARIAVEIS
+int x = 9, y = 5, z = 10;
+cout << x + y + z
+*/
+
+/* MIX DE VARIAVEIS
+int myAge = 35;
+cout << "I am " << myAge << " years old.";
+*/
+
+
+/* VARÍAVEIS CONSTANTES (sempre vai receber aquele valor)
+const int minutesPerHour = 60;
+const float PI = 3.14;
+cout << minutesPerHour << endl;
+cout << PI;
+return 0
+
+#define saudacoes cout << "ABRAÇO ";
+
+*/

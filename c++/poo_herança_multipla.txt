@@ -1,0 +1,56 @@
+INT MAIN
+
+#include <iostream>
+#include "classes.h"
+using namespace std;
+
+int main() {
+  Base1 *obj1 = new Base1();
+  Base2 *obj2 = new Base2();
+  Daniel *teste = new Daniel();
+
+  obj1 -> impBase1();
+  obj2 -> impBase2();
+ 
+ //consegue chamar os dois metodos das duas classes diferentes graças a herança 
+  teste -> impBase1();
+  teste -> impBase2();
+
+
+  return 0;
+}
+----------------------------------------------------------------------
+
+CLASSES.H
+
+#ifndef CLASSES_H_INCLUDED
+#define CLASSES_H_INCLUDED
+using namespace std;
+
+class Base1 {
+  public:
+     void impBase1();
+
+};
+
+void Base1::impBase1(){
+  cout << "Imp classe BASE1" << endl;
+}
+
+class Base2 {
+  public:
+     void impBase2();
+
+};
+
+void Base2::impBase2() {
+  cout << "Imp classe BASE2" << endl;
+}
+
+//criando uma classe que herdas as duas
+
+class Daniel:public Base1, public Base2 {
+
+};
+
+#endif

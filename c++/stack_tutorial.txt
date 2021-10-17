@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+
+stack<int> pilha1, pilha2;
+pilha1.push(10);
+pilha1.push(20);
+pilha1.push(30);
+pilha1.push(40);
+pilha1.push(50);
+pilha1.emplace(60);
+
+cout << "SWAP:" << endl << endl;
+pilha2.swap(pilha1);
+
+cout << "TAMANHO:" << endl;
+cout << pilha2.size() << endl << endl;
+
+cout << "REMOVENDO PILHA:" << endl;
+while( not pilha2.empty()){
+  cout << pilha2.top() << endl;
+  pilha2.pop();
+}
+
+return 0;
+}

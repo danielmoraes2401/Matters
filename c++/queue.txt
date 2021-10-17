@@ -1,0 +1,34 @@
+// <queue>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+queue<int>fila1,fila2;
+fila2.push(10);
+fila2.push(20);
+fila2.push(30);
+fila2.push(40);
+fila2.push(50);
+fila2.emplace(60);
+fila2.emplace(60);
+
+cout << "SWAP:" << endl;
+fila2.swap(fila1);
+
+cout << "PRIMEIRO ELEMENTO:" << endl;
+cout << fila1.front() << endl << endl;
+
+cout << "ULTIMO ELEMENTO:" << endl;
+cout << fila1.back() << endl << endl;
+
+cout << "TAMANHO DA FILA:" << endl;
+cout << fila1.size() << endl << endl;
+
+cout << "APAGANDO ELEMENTOS e printando:" << endl;
+while (!fila1.empty()){
+  cout << fila1.front() << " - ";
+  fila1.pop();
+}cout << endl;
+
+return 0;
+}

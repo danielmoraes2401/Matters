@@ -1,0 +1,56 @@
+// DATA, HORA, controle de Tempo do programa
+#include <iostream>
+#include <cmath> //<math.h>
+#include <ctime> //<time.h>
+using namespace std;
+
+int numeros_primos(int n){
+  int i,j;
+  int freq = n - 1;
+  for (i = 2; i <= n;++i){
+    for(j = sqrt(i); j > 1;--j){
+      if(i % j == 0){
+        --freq;
+        break;
+      }
+    }
+  }
+  return freq;
+}
+
+int main(){
+
+//CLOCK
+  int primos;
+  clock_t t1,t2,t3;
+  t1 = clock();
+  primos = numeros_primos(10);
+  t2 = clock();
+  t3 = difftime(t2,t1);
+  cout << "--------CLOCK----------" << endl;
+  cout << "QTD de primos: " << primos << endl;
+  cout << "Tempo de processamento gasto: " << ((float)t3/CLOCKS_PER_SEC) << " SEG" << endl << endl;
+
+//TIME
+  time_t t4;
+  time(&t4);
+  cout << "--------TIME----------" << endl;
+  cout << t4 << " segundos desde 00:00 de 1 de Janeiro de 1970" << endl << endl;
+
+//localtime() /asctime() /strftime() //ver os strftime()
+
+  time_t t5;
+  struct tm *infoTempo;
+  char buffer[80];
+  time(&t5);
+  infoTempo = localtime(&t5);
+  cout << "----ASCTIME/LOCALTIME-------" << endl;
+  cout << asctime(infoTempo) << endl;
+  cout << ctime(&t5) << endl; //so precisa da time_t t5; time(&t5);
+  strftime(buffer,80,"%d/%m/%Y", infoTempo);
+  cout << buffer << endl;
+
+
+
+  return 0;
+}

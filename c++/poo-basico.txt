@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+//criando a classe Avião
+//separando metodos do tipo public e private
+class Aviao {
+  public: 
+  int vel = 0;
+  int velMax;
+  string tipo;
+//prototipei o metodo ini que recebe um valor inteiro como parametro 
+  void ini (int tp);
+
+  private:
+
+};
+
+//criando a funcao (1= jato, 2  = monomotor e 3 = planador)
+void Aviao::ini(int tp){
+  if (tp == 1) {
+    this -> velMax = 800;
+    this -> tipo = "Jato";
+  
+  }else if(tp == 2){
+    this -> velMax = 350;
+    this -> tipo = "Monomotor";
+  
+  } else if (tp == 3){
+    this -> velMax = 180;
+    this -> tipo = "Planador";
+  }
+}
+
+int main() {
+//instaciando um objeto "av1" do tipo Aviao   
+  Aviao *av1 = new Aviao();
+  Aviao *av2 = new Aviao();
+//afirmando o ini do aviao  
+  av1 -> ini(1);
+  av2 -> ini(2);
+
+  
+//printando a velocidade do av1
+  cout << av1->velMax << "\n\n";
+  cout << av2->velMax << "\n\n";
+
+  return 0;
+}

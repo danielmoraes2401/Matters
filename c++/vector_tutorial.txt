@@ -1,0 +1,102 @@
+// <vector>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  vector<int> vct = {9,2,7,4,6,3,8,0,1,10};
+  vector<int>::iterator it;
+  vector<int>::iterator it1;
+  vector<int> vct2;
+  cout << "SIZE:"<< "\n"<< vct.size() << endl << endl;
+  
+  cout << "MAXSIZE:"<< "\n"<< vct.max_size() << endl << endl;
+  
+  //rbegin() and rend() ao contrário
+  /*for(auto it=vct.begin();it!=vct,end();++i){
+    cout << *it << endl; 
+    }  
+  */
+  cout << "PRINT FOR"<< endl;
+  for (int x:vct){
+    cout << x << endl;
+  } cout << endl;
+  
+  cout << "RESIZE:" << endl;
+  vct.resize(5);
+  for (int x:vct){
+    cout << x << endl;
+  } cout << endl;
+
+  cout << "CAPACITY:"<< "\n"<< vct.capacity() << endl << endl;
+
+  cout << "SHRINK_TO_FIT:" << endl;
+  vct.shrink_to_fit();
+  cout << vct.capacity() << endl << endl;
+  
+
+  cout << "EMPTY:" << endl;
+  if (vct.empty()){
+    cout << "Vector vazio!" << endl;
+
+  } else {
+    cout << "Vector não vazio!" << endl;
+  } cout << endl << endl;
+  
+  cout << "ACESSAR POSIÇÃO:"<< "\n"<< vct[3] << endl << endl;
+
+  cout << "ACESSAR POSIÇÃO:"<< "\n"<< vct.at(3) << endl << endl;
+
+  cout << "ACESSAR PRIMEIRA POSIÇÃO:"<< "\n"<< vct.front() << endl << endl;
+    
+  cout << "ACESSAR ULTIMO POSIÇÃO:"<< "\n"<< vct.back() << endl << endl;
+
+  cout << "ATRIBUIR ELEMENTOS NUM VECTOR VAZIO:" << endl;
+  vct2.assign(5,0);
+  //vct2.assing(vct.begin(),vct.end()) adicionar vct no vct2
+  for (int x:vct2){
+    cout << x << endl;
+  } cout << endl;
+
+  cout << "ADICIONAR ELEMENTO NO FINAL:" << endl;
+  //vct.emplace_back(111); no final
+  vct.push_back(111);
+  cout << vct.back() << endl << endl;
+
+  cout << "DELETA ELEMENTO NO FINAL:" << endl;
+  vct.pop_back();
+  cout << vct.back() << endl << endl;
+
+
+  cout << "ADICIONAR ELEMENTO NO VECTOR EM ALGUMA POSIÇÃO:" << endl;
+  it1 = vct.begin()+2;
+  //vct.insert(it,5,9) = 5 vezes o numero 9
+  vct.insert(it1,5);
+  for (int x:vct){
+    cout << x << endl;
+  } cout << endl;
+
+  cout << "ADICIONA ELEMENTOS NUMA POSIÇÃO SEM SUBSTITUIR:" << endl;
+  vct.emplace(vct.begin()+2,9);
+  for (int x:vct){
+    cout << x << endl;
+  } cout << endl;
+
+  cout << "DELETA ELEMENTO EM UMA POSIÇÃO:" << endl;
+  it = vct.end()-3;
+  //vct.erase(vct.begin(),vct.begin()+2) apaga do começo até a posição 2
+  vct.erase(it);
+  for (int x:vct){
+    cout << x << endl;
+  } cout << endl;
+
+  cout << "TROCA VECTORS:" << endl;
+  vct.swap(vct2);
+  for (int x:vct){
+    cout << x << endl;
+  } cout << endl;
+
+  cout << "APAGA TODOS OS NUMEROS:" << endl;
+  vct.clear();
+
+  return 0;
+}

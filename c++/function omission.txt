@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+void imprime(string txt="Você não imprimiu nada");
+
+int main() {
+  
+  string texto;
+  texto = "Olá";
+
+  imprime();
+
+  return 0;
+}
+
+void imprime(string txt){
+  cout << txt << endl;
+}

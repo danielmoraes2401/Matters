@@ -1,0 +1,16 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main() {
+//comando de diretorio
+  system("dir");
+// limpa a tela 
+  system("cls");
+//mudar a cor do prompt
+  system("color 47");
+// pausa pra esperar uma interação para continuar
+  system("pause");
+  
+  return 0;
+}
