@@ -1,0 +1,966 @@
+OQ FALTA
+-18) Collapse
+-20) Navbar
+-23) Input Groups
+-24) Custom Forms
+
+1) Containers
+The .container class provides a responsive fixed width container
+The .container-fluid class provides a full width container, 
+spanning the entire width of the viewport
+
+
+2) Grid Clases
+xs (for phones - screens less than 768px wide)
+sm (for tablets - screens equal to or greater than 768px wide)
+md (for small laptops - screens equal to or greater than 992px wide)
+lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+
+|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1|SPAN 1| 
+|          SPAN 4        |           SPAN 4            |              SPAN 4               |
+|          SPAN 4              |                      SPAN 8                               |
+|                       SPAN 6               |              SPAN 6                         |
+|                                          SPAN 12                                         |
+
+
+3) Row (class = "col-gridClasses-spansize)
+-Horizontal group of columns
+
+<div class="container-fluid">
+  <h1>Hello World!</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>The columns will automatically stack on top of each other when the screen 
+     is less than 768px wide.</p>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+  </div>
+
+4) Default Settings
+Font-size = 16px;
+line-height = 1.5;
+font-family = "Helvetica Neue", Helvetica, Arial, sans-serif;
+In addition, all <p> elements have margin-top: 0 and margin-bottom: 1rem(16px).
+
+4.1)<h1> - <h6>
+h1 Bootstrap heading (2.5rem = 40px)
+h2 Bootstrap heading (2rem = 32px)
+h3 Bootstrap heading (1.75rem = 28px)
+h4 Bootstrap heading (1.5rem = 24px)
+h5 Bootstrap heading (1.25rem = 20px)
+h6 Bootstrap heading (1rem = 16px)
+
+4.2)Display Headings
+- Display(cabeçalhos de exi) são usados para destacar mais que não as posições normais 
+(maior font-size e mais leve font-weight), e existem quatro classes para escolher:
+ .display-1, .display-2, .display-3,.display-4
+
+4.3)<small>
+- No Bootstrap 4, o <small>elemento HTML é usado para criar um texto secundário 
+mais claro em qualquer cabeçalho.
+ //
+<h1>h1 heading <small>secondary text</small></h1>
+//
+
+4.4)<mark>
+- will style the HTML <mark> element with a yellow background color and some padding:
+//
+<p>Use the mark element to <mark>highlight</mark> text.</p>
+//
+
+4.5)<abbr>
+-will style the HTML <abbr> element with a dotted border bottom
+//
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+//
+
+4.6) <blockquote>
+-citar blocos de conteúdo de outra fonte
+
+//
+<blockquote class="blockquote">
+  <p>For 50 years, WWF has been protecting the future of nature. 
+     The world's leading conservation organization, WWF works in 100 countries and
+     by 1.2 million members in the United States and close to 5 million globally.</p>
+  <footer class="blockquote-footer">From WWF's website</footer>
+</blockquote>
+//
+
+4.7) Lists (<dl>)
+
+//
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+//
+
+4.8) <code> (escreve um html code)
+
+//
+<p>The following HTML elements: <code>span</code>, <code>section</code>, and 
+<code>div</code> defines a section in a document.</p>
+//
+
+4.9) <kbd> (atalho de pc)
+
+//
+<p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+//
+
+4.10) <pre> (mesma formatacao de como tava no editor)
+
+//
+<pre>
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks.
+</pre>
+//
+
+5) Colors
+
+5.1) Text Colors
+.text-muted
+.text-primary
+.text-success
+.text-info
+.text-warning
+.text-danger
+.text-secondary
+.text-white
+.text-dark
+.text-body
+.text-light
+
+5.2) Background Colors
+.bg-primary
+.bg-success
+.bg-info
+.bg-warning
+.bg-danger 
+.bg-secondary
+.bg-dark
+.bg-light
+
+<p class="text-white-50 bg-dark">This text is muted.</p> (50% DE OPACITY, e fundo dark)
+<a href="#" class="text-muted">clique aqui.</a> (LINK)
+
+6) Table (celulas <tr>)
+
+- <thead> = 1ª linhas -> colunas(<th>)
+- <tbody> = linhas (<td>)
+
+<table class="table"> 
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-danger">
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+6.1)Types of tables (table class="table X Y Z):
+
+.table-striped (zebras)
+.table-bordered (bordas)
+.table-hover (grey background with hover effect)
+.table-dark( black background)
+.table-borderless
+
+6.2) Context Classes (linhas <tr> ou <td> celulas)
+
+.table-primary		Azul: indica uma ação importante
+.table-success		Verde: indica uma ação positiva ou bem sucedida
+.table-danger		Vermelho: indica uma ação perigosa ou potencialmente negativa
+.table-info		Azul claro: indica uma alteração ou ação informativa neutra
+.table-warning		Laranja: indica um aviso que pode precisar de atenção
+.table-active		Cinza: aplica a cor do cursor à linha ou célula da tabela
+.table-secondary	Cinza: indica uma ação um pouco menos importante
+.table-light		Tabela cinza clara ou fundo da linha da tabela
+.table-dark		Tabela cinza escura ou fundo da linha da tabela
+ 
+6.2) Table Head Colors
+- thead class="thead-dark"
+.thead-dark 
+.thead.light
+
+6.3) Small table
+- <table class="table table-bordered table-sm">
+
+6.4) Responsive Table 
+- adiciona um scroolbar qnd é mt grande horizontalmente
+
+//
+div class="table-responsive"> or "table-responsive-sm"
+  <table class="table">
+   ...
+  </table>
+</div>
+//
+
+7) Images
+
+.rounded
+.rounded-circle (circulo)
+.img-thumbnail (bordas)
+.float-right
+.float-left
+.mx-auto (margin auto)
+.d-block(display block)
+.img-fluid (max-width: 100% and height: auto
+
+8) Jumbotron
+- Um jumbotron indica uma grande caixa cinza para chamar atenção extra para algum 
+conteúdo ou informação especial.
+
+//
+<div class="container">
+  <div class="jumbotron">
+    <h1>Bootstrap Tutorial</h1>      
+    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive,
+       mobile-first projects on the web.</p>
+  </div>
+  <p>This is some text.</p>      
+  <p>This is another text.</p>      
+</div>
+//
+
+9) Alerts
+.alert-success
+.alert-info
+.alert-warning
+.alert-danger
+.alert-primary
+.alert-secondary
+.alert-light
+.alert-dark:
+
+//
+<div class="alert alert-success">
+  <strong>Success!</strong> This alert box could indicate a successful or positive action.
+</div>
+//
+
+9.1) Alert Links
+
+//
+<div class="alert alert-success">
+  <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+</div>
+//
+
+9.2) Closing Alerts
+
+//
+<div class="alert alert-success alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+//
+
+9.3) Animated Closing Alerts
+- <div class="alert alert-danger alert-dismissible fade show">
+
+10) Buttons
+- <button type="button" class="btn">Basic</button>
+
+10.1) Button Link
+- <a href="#" class="btn btn-info" role="button">Link Button</a>
+
+10.2) Button Outline
+.btn-outline-"cor"
+
+10.3) Button Size
+.btn-lg (grande)
+.btn-sm (pqno)
+
+10.4) Full-width Button
+.btn-block
+
+10.5) Active/Disable Buttons
+.active
+.disabled (after the <... class= "..." disabled>)
+
+10.6) Spinner Buttons
+
+//
+<button class="btn btn-primary">
+  <span class="spinner-border/grow spinner-border/grow-sm/lg" disabled></span>
+  Loading..
+</button>
+//
+
+10.7) Button Groups
+.btn-group-lg or sm (at the div class)
+
+//
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Apple</button>
+  <button type="button" class="btn btn-primary">Samsung</button>
+  <button type="button" class="btn btn-primary">Sony</button>
+</div>
+//
+
+10.8) Vertical Button Groups
+.btn-group-vertical
+
+
+10.9) Split Button Dropdowns
+
+//
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Sony</button>
+  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" 
+   data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Tablet</a>
+    <a class="dropdown-item" href="#">Smartphone</a>
+  </div>
+</div>
+//
+
+10.10) Vertical Button Group with Dropdown
+
+//
+<div class="btn-group-vertical">
+  <button type="button" class="btn btn-primary">Apple</button>
+  <button type="button" class="btn btn-primary">Samsung</button>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+       Sony
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Tablet</a>
+      <a class="dropdown-item" href="#">Smartphone</a>
+    </div>
+  </div>
+</div>
+
+10.11) Button Group Side by Side (inline by default)
+
+//
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Apple</button>
+  <button type="button" class="btn btn-primary">Samsung</button>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">BMW</button>
+  <button type="button" class="btn btn-primary">Mercedes</button>
+</div>
+//
+
+11) Badges
+- Os crachás são usados ​​para adicionar informações adicionais a qualquer conteúdo.
+
+//
+   <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+//
+
+11.1) Contextual Badges
+.badge-success
+.badge-info
+.badge-warning
+.badge-danger
+.badge-primary
+.badge-secondary
+.badge-light
+.badge-dark
+
+11.2) Pill Badges
+.badge-pill
+
+11.3) Badge inside an Element
+
+//
+<button type="button" class="btn btn-primary">
+  Messages <span class="badge badge-light">4</span>
+</button>
+//
+
+12) Progress Bars
+- Para criar uma barra de progresso padrão, adicione uma classe .progress a um 
+elemento de contêiner e adicione a classe .progress-bar  ao seu elemento filho. 
+Use a width propriedade CSS para definir a largura da barra de progresso
+
+//
+<div class="progress">
+  <div class="progress-bar" style="width:70%"></div>
+</div>
+//
+
+12.1) Progress Bar Height (Same height) 
+
+//
+<div class="progress" style="height:20px">
+  <div class="progress-bar" style="width:40%;height:20px"></div>
+</div>
+//
+
+12.2) Progress Bar Labels
+- <div class="progress-bar" style="width:70%">70%</div>
+
+12.3) Colored Progress Bars
+
+//
+<!-- Green -->
+<div class="progress">
+  <div class="progress-bar bg-success" style="width:20%">20%</div>
+</div>
+//
+
+12.4) Striped Progress Bars
+- <div class="progress-bar progress-bar-striped" style="width:40%"></div>
+
+12.5) Animated Progress Bar
+- <div class="progress-bar progress-bar-striped progress-bar-animated" 
+              style="width:40%"></div>
+
+12.6) Multiple Progress Bars
+
+//
+<div class="progress">
+  <div class="progress-bar bg-success" style="width:40%">
+    Free Space
+  </div>
+  <div class="progress-bar bg-warning" style="width:10%">
+    Warning
+  </div>
+  <div class="progress-bar bg-danger" style="width:20%">
+    Danger
+  </div>
+</div>
+//
+
+13) Spinners
+- <div class="spinner-border"></div>
+
+13.1) Colored Spiners
+.text-success
+.text-info
+.text-warning
+.text-danger
+.text-primary
+.text-secondary
+.text-light
+.text-dark
+
+13.1) Growing Spinners
+.spinner-grow
+
+13.2) Spinner Size
+.spinner-border/grow-sm/lg
+
+14) Pagination
+//
+<ul class="pagination">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+//
+
+14.1) Active State
+- <li class="page-item active"><a class="page-link" href="#">2</a></li>
+
+14.2) Disabled State
+- <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+
+14.3) Pagination Sizing
+- <ul class="pagination pagination-lg/sm">
+
+14.4) Pagination Alignment
+- <ul class="pagination justify-content-end/center" style="margin:20px 0">
+
+14.5) Bradcrumps
+//
+<ul class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Photos</a></li>
+  <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+  <li class="breadcrumb-item"><a href="#">Italy</a></li>
+  <li class="breadcrumb-item active">Rome</li>
+</ul>
+//
+
+15) List Groups
+//
+<ul class="list-group">
+  <li class="list-group-item">First item</li>
+  <li class="list-group-item">Second item</li>
+  <li class="list-group-item">Third item</li>
+</ul>
+//
+
+15.1) Active/Disabled State
+- <li class="list-group-item active/disabled">Active item</li>
+
+15.2) List Group with Linked Itens and Hover(grey bg)
+//
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">First item</a>
+  <a href="#" class="list-group-item list-group-item-action">Second item</a>
+  <a href="#" class="list-group-item list-group-item-action">Third item</a>
+</div>
+//
+
+15.3) Remove Borders
+- <ul class="list-group list-group-flush">
+
+15.4) Horizontal List Groups
+- <ul class="list-group list-group-horizontal">
+
+15.5) Contextual Classes
+.list-group-item-success
+.list-group-item-secondary
+.list-group-item-info
+.list-group-item-warning
+.list-group-item-danger
+.list-group-item-primary
+.list-group-item-dark
+.list-group-item-light
+
+15.6) List Group with Badges
+//
+<ul class="list-group">
+   <li class="list-group-item d-flex justify-content-between align-items-center">
+     Inbox
+     <span class="badge badge-primary badge-pill">12</span>
+   </li>
+</ul>
+//
+
+16) Cards
+- Um card no Bootstrap 4 é uma caixa com bordas com algum preenchimento em torno
+de seu conteúdo. Inclui opções para cabeçalhos, rodapés, conteúdo, cores, etc.
+//
+<div class="card">
+  <div class="card-body">Basic card</div>
+</div>
+//
+
+16.1) Header and Footer
+//
+<div class="card">
+  <div class="card-header">Header</div>
+  <div class="card-body">Content</div>
+  <div class="card-footer">Footer</div>
+</div>
+//
+
+16.2) Contextual Cards
+- <div class="card bg-primary/others text-white/others">
+
+16.3) Titles, text and links
+//
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">Some example text. Some example text.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+//
+
+16.4) Card Images 
+//
+<div class="card" style="width:400px">
+  <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">John Doe</h4>
+    <p class="card-text">Some example text.</p>
+    <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+  </div>
+</div>
+OBS:. streched-link (todo o card vira link)
+//
+
+16.5) Image Overley
+//
+<div class="card" style="width:500px">
+  <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+  <div class="card-img-overlay">
+    <h4 class="card-title">John Doe</h4>
+    <p class="card-text">Some example text.</p>
+    <a href="#" class="btn btn-primary">See Profile</a>
+  </div>
+</div>
+//
+
+16.6) Card Columns/Deck/Group
+//
+<div class="card-columns/deck/group">
+  <div class="card bg-primary">
+    <div class="card-body text-center">
+      <p class="card-text">Some text inside the first card</p>
+    </div>
+  </div>
+  <div class="card bg-warning">
+    <div class="card-body text-center">
+      <p class="card-text">Some text inside the second card</p>
+    </div>
+  </div>
+  <div class="card bg-success">
+    <div class="card-body text-center">
+      <p class="card-text">Some text inside the third card</p>
+    </div>
+  </div>
+</div>
+//
+
+17) Dropdowns
+-A classe .dropdown indica um menu suspenso.
+
+Para abrir o menu suspenso, use um botão ou um link com uma classe .dropdown-togglee o 
+atributo data-toggle="dropdown". Adicione a classe .dropdown-menu  a um elemento <div> 
+para criar o menu suspenso. 
+
+Em seguida, adicione a classe .dropdown-item a cada elemento (links ou botões) 
+dentro do menu suspenso.
+
+//                                      
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+    </div>
+  </div>
+//
+
+17.1) Dropdown Divider
+- <div class="dropdown-divider"></div> dentro do <div> class="dropdown-menu" </div>
+
+17.2) Disable and Active items
+<a class="dropdown-item active" href="#">Active</a>
+<a class="dropdown-item disabled" href="#">Disabled</a>
+
+17.3) Dropdown Position (Abrir o menu pra esquerda o direita)
+-<div class="dropdown dropright/dropleft">
+-<div class="dropup"> (para cima)
+
+17.4) Types of dropdown menu
+
+<div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Link 1</a> LINK
+  <a class="dropdown-item-text" href="#">Text Link</a> TEXT LINK
+  <span class="dropdown-item-text">Just Text</span> SO TEXTO
+</div>
+
+17.5) Grouped Buttons with a Dropdown
+//
+<div class="container">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Sony
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Tablet</a>
+        <a class="dropdown-item" href="#">Smartphone</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+if you want make a split menu you only add dropdown-toggle-split in your button choice
+//
+
+17.6) Vertical Button Group w/Dropdown
+- <div class="btn-group-vertical">
+
+18) Collapse
+
+19) Navs
+- Se você deseja criar um menu horizontal simples, adicione a classe .nav a um elemento<ul>
+ seguido por .nav-item cada <li> e adicione a classe .nav-link aos seus links
+//
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Menu</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Contato</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+//
+
+19.1) Aligned Nav
+- <ul class="nav justify-content-center/end">
+
+19.2) Vertical Nav
+- <ul class="nav flex-column">
+
+19.2) Tabs
+- <ul class="nav nav-tabs">
+
+Obs:. na pagina atual coloca
+- <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+
+19.3) Pills
+- <ul class="nav nav-pills">
+
+19.4) Nav Justified (toda a pag, reformulando a largura)
+<ul class="nav nav-pills/tabs nav-justified">..</ul>
+
+19.5) Pills/Tabs with Dropdown
+//
+<ul class="nav nav-pills/tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+//
+
+20) Navbar
+- Uma barra de navegação é um cabeçalho de navegação colocado na parte superior da página
+
+21) Forms
+//
+<form action="/action_page.php">
+  <div class="form-group/inline">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" placeholder="Enter email" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+  </div>
+  <div class="form-group form-check">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox"> Remember me
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+//
+
+OBS:. no inline fica bem compromido, ai voce adiciona a classe .mb-2 mr-sm-2
+
+21.2) Row/Grid
+//
+<form>
+  <div class="row/form-row">
+    <div class="col">
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="col">
+      <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+    </div>
+  </div>
+</form>
+//
+
+21.3) Validation
+//
+<form action="/action_page.php" class="was-validated">
+  <div class="form-group">
+    <label for="uname">Username:</label>
+    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <div class="form-group form-check">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Check this checkbox to continue.</div>
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+//
+
+22) Inputs
+types:
+text
+password
+datetime
+datetime-local
+date
+month
+time
+week
+number
+email
+url
+search
+tel
+color
+
+22.1) Textarea
+//
+<div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+//
+
+22.2) Checkboxes/Radio (radio só 1 escolha)
+//
+<div class="form-check/form-check-inline">
+      <label class="form-check-label" for="check1">
+        <input type="checkbox/radio" class="form-check-input" id="check1" name="option1" 
+	value="something" checked> Option 1
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label" for="check2">
+        <input type="checkbox/radio" class="form-check-input" id="check2" name="option2" 
+	value="something"> Option 2
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox/radio" class="form-check-input" disabled> Option 3
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+//
+
+22.3) Select List
+//
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="sel1">Select list (select one):</label>
+      <select class="form-control" id="sel1" name="sellist1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      <br>
+      <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+      <select multiple class="form-control" id="sel2" name="sellist2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+//
+
+22.4) Control Sizing
+- <input type="" class="form-control form-control-sm">
+
+22.5) Plain Text
+- <input type="" class="form-control-plaintext">
+
+22.6) Control File and Range
+- <input type="range" class="form-control-range">
+- <input type="file" class="form-control-file border">
+
+23) Input Group
+
+24) Custom Forms
+
+25) Carousel
+- slideshow for cycling through elements
+
+//
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="la.jpg" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img src="chicago.jpg" alt="Chicago">
+    </div>
+    <div class="carousel-item">
+      <img src="ny.jpg" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+//
+
+25.1) Add Captions
+//
+<div class="carousel-item">
+  <img src="la.jpg" alt="Los Angeles">
+  <div class="carousel-caption">
+    <h3>Los Angeles</h3>
+    <p>We had such a great time in LA!</p>
+  </div>
+</div>
+//

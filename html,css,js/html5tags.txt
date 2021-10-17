@@ -1,0 +1,416 @@
+OQUE NAO VI AINDA
+HTML CSS
+HTML COLORS
+
+
+*Tem que ter isso no programa...
+
+<!DOCTYPE html>
+<html>
+<body>
+
+(( Só aparece oq tem no <body> ))
+
+<body>
+</html>
+
+***********tags:
+
+1)  O valor do atributo title será exibido como uma dica de 
+ferramenta quando você passa o mouse sobre o parágrafo:
+
+//
+
+<p title="I'm a tooltip">
+This is a paragraph.
+</p> 
+
+//
+
+2) O style atributo é usado para especificar o estilo de um elemento, 
+como cor, fonte, tamanho etc.
+
+//
+
+<p style="color:red">This is a red paragraph.</p>
+
+//
+
+2.1) BackGround Color
+
+//
+
+<body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+
+//
+
+2.2) Text Color
+
+//
+
+<h1 style="color:blue;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+
+//
+
+2.3) Fonts
+
+//
+
+<h1 style="font-family:verdana;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p>
+
+
+//
+
+2.4) Text Size
+
+//
+
+<h1 style="font-size:300%;">This is a heading</h1>
+<p style="font-size:160%;">This is a paragraph.</p>
+
+//
+
+2.5) Text Alignment
+
+//
+
+<h1 style="text-align:center;">Centered Heading</h1>
+OBS:. left, right, justify
+
+//
+
+2.6) Style Summary
+Use the style attribute for styling HTML elements
+Use background-color for background color
+Use color for text colors
+Use font-family for text fonts
+Use font-size for text sizes
+Use text-align for text alignment
+
+3)
+
+alt		Specifies an alternative text for an image, when the image cannot be displayed
+disabled	Specifies that an input element should be disabled
+href		Specifies the URL (web address) for a link
+id		Specifies a unique id for an element
+src		Specifies the URL (web address) for an image
+style		Specifies an inline CSS style for an element
+title		Specifies extra information about an element (displayed as a tool tip)
+
+4) 
+
+<h1>Heading 1</h1> "A mais importante = a maior"
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6> "Menos importante = menor"
+OBS:. Browsers automatically add some white space (a margin) before and after a heading.
+
+5) A <hr> tag define uma quebra temática em uma página HTML e é mais frequentemente exibida 
+como uma regra horizontal.
+
+//
+
+<h1>This is heading 1</h1>
+<p>This is some text.</p>
+<hr>
+<h2>This is heading 2</h2>
+<p>This is some other text.</p>
+<hr>
+
+//
+
+6) O <head>elemento HTML é um contêiner para metadados. Os metadados HTML são dados sobre o documento HTML. 
+Os metadados não são exibidos.O <head>elemento é colocado entre a <html>tag e a <body>
+
+//
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First HTML</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<p>The HTML head element contains meta data.</p>
+<p>Meta data is data about the HTML document.</p>
+
+</body>
+</html>
+
+//
+
+7)
+
+<html>		Defines the root of an HTML document
+<body>		Defines the document's body
+<head>		A container for all the head elements (title, scripts, styles, meta information, and more)
+<h1> to <h6>	Defines HTML headings
+<hr>		Defines a thematic change in the content
+
+8) The browser will remove any extra spaces and extra lines when the page is displayed
+
+//
+
+<p>
+This paragraph
+contains         a lot of spaces
+in the source         code,
+but the        browser
+ignores it.
+</p>
+
+//
+
+9) The HTML <pre> element defines pre-formatted text. Vai aparecer exatamente como está
+preservabdi espaços e linhas quebradas.
+
+//
+
+<pre>
+   My Bonnie lies over the ocean.
+
+   My Bonnie lies over the sea.
+
+   My Bonnie lies over the ocean.
+   
+   Oh, bring back my Bonnie to me.
+</pre>
+
+//
+
+10) Text Formatting
+
+<mark> - Marked text (marca texto)
+<del> - Deleted text (risco)
+<ins> - Inserted text (sublinhado)
+<sub> - Subscript text (embaixo)
+<sup> - Superscript text (emcima)
+
+11) Quotation and Citation Elements
+
+<abbr>		Defines an abbreviation or acronym (ao passar o mouse aparece o titulo)
+Ex: 
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<address>	Defines contact information for the author/owner of a document (italico e 
+pre formatado)
+
+<bdo>		Defines the text direction (muda ordem)
+<blockquote>	Defines a section that is quoted from another source
+<cite>		Defines the title of a work
+<q>		Defines a short inline quotation (aparece as aspas)
+
+12) Para comentar voce usar (<!-- Write your comments here -->)
+
+13) HTML Links - The target Attribute
+
+The target attribute can have one of the following values:
+
+_blank - Opens the linked document in a new window or tab
+_self - Opens the linked document in the same window/tab as it was clicked (this is default)
+_parent - Opens the linked document in the parent frame
+_top - Opens the linked document in the full body of the window
+framename - Opens the linked document in a named frame
+
+13.1) Image as a Link
+
+//
+
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+</a>
+
+OBS: border:0; é adicionado para impedir o IE9 (e versões anteriores) de exibir uma 
+borda ao redor da imagem quando a imagem é um link).
+//
+
+13.2) Buttom as a Link
+
+//
+
+<button onclick="document.location = 'default.asp'">HTML Tutorial</button>
+
+//
+
+13.3) Title of the Link (passa o mouse em cima do link)
+
+//
+
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools 
+HTML section">Visit our HTML Tutorial</a>
+
+//
+
+13.4) Extern Path (url completo)
+
+//
+
+<a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a>
+
+//
+
+13.5) Same Page Link
+
+<body>
+
+<p><a href="#C4">Jump to Chapter 4</a></p>
+<p><a href="#C10">Jump to Chapter 10</a></p>
+
+<h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 2</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 3</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2 id="C4">Chapter 4</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 9</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2 id="C10">Chapter 10</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 11</h2>
+<p>This chapter explains ba bla bla</p>
+</body>
+
+//
+
+14) Image Maps
+
+Use the HTML <map> element to define an image-map
+Use the HTML <area> element to define the clickable areas in the image-map
+	rect - defines a rectangular region
+	circle - defines a circular region
+	poly - defines a polygonal region
+	default - defines the entire region
+	
+	clickable area does not have to be a link to another page, 
+	it can also trigger a JavaScript function.
+	Add a click event on the <area> element to execute a JavaScript function:
+
+Use the HTML <img>'s element usemap attribute to point to an image-map
+
+15) HTML TABLES
+Uma tabela HTML é definida com a tag <table>. Cada linha da tabela é definida com a tag <tr>. Um cabeçalho da tabela é definido com a tag <th>.
+Por padrão, os títulos das tabelas estão em negrito e centralizados. Os dados / célula da tabela são definidos com a tag <td> 
+
+Use o <table>		elemento HTML para definir uma tabela
+Use o <tr>		elemento HTML para definir uma linha da tabela
+Use o <td>		elemento HTML para definir os dados da tabela
+Use o <th>		elemento HTML para definir um cabeçalho da tabela
+Use o <caption>		elemento HTML para definir uma legenda da tabela
+Use a border		propriedade CSS para definir uma borda
+Use a border-collapse	propriedade CSS para recolher as bordas das células
+Use a padding		propriedade CSS para adicionar preenchimento às células
+Use a text-align	propriedade CSS para alinhar o texto da célula
+Use a border-spacing	propriedade CSS para definir o espaçamento entre células
+Use o colspan		atributo para fazer uma célula abranger muitas colunas
+Use o rowspan		atributo para fazer uma célula se estender por muitas linhas
+Use o id		atributo para definir exclusivamente uma tabela
+
+16) HTML Link Colors (using CSS)
+
+//
+
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+
+//
+
+17) HTML Block and Inline Elements
+
+*Blocks:
+<address>    <article>     <aside>      <blockquote>
+<canvas>  <dd>
+<div>      <dl>   <dt>         <fieldset>
+<figcaption>
+<figure>     <footer>      <form>     <h1>-<h6>
+<header>     <hr>     <li>
+<main>   <nav>    <noscript>     <ol>    <p>   <pre>  <section>
+<table>    <tfoot>   <ul>   <video>
+
+*Inline:
+
+<a>       <abbr>     <acronym>      <b>     <bdo>        <big>
+<br>       <button>
+<cite>       <code>
+<dfn>       <em>          <i>      <img>         <input>
+<kbd>     <label>     <map>
+<object>     <output>     <q>
+<samp>       <script>      <select>         <small>       <span>      <strong>
+<sub>      <sup>     <textarea>       <time>     <tt><         var>
+
+18) HTML Classes
+
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+
+</style>
+
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+18.1) Multiple Classes
+
+<h2 class="city main">London</h2> (classes separado por espaços)
+<h2 class="city">Paris</h2>
+<h2 class="city">Tokyo</h2>
+
+
+
+19) HTML Id
+
+//
+
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+
+<h1 id="myHeader">My Header</h1>
+
+//
+
+OBS:. An HTML element can only have one unique id that belongs to that single element, 
+while a class name can be used by multiple elements.

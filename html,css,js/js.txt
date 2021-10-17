@@ -1,0 +1,389 @@
+FALTA: 8,13
+
+1) Onde escrever código JavaScript?
+- inserido entre <script> e </script>
+
+- os <scripts> pode ser colocado entre o body (melhora a velocidade da exibição, porque a interpretação do script
+diminui a exibição.), head (antes da página ter sido carregada) ou arquivos externos (Scripts externos não podem conter
+tags <script>; ele separa HTML e código; facilita a leitura e a manutenção de HTML; JavaScript arquivos JavaScript em 
+cache podem acelerar o carregamento da página.)
+
+- Externamente: <script> src = "name.js"></script>
+OBS:. Os scripts externos podem ser referenciados com uma URL completa ou com um caminho relativo à página da web atual
+
+2) JS Output?
+-Escrevendo em um elemento HTML, usando  	innerHTML.
+-Escrevendo na saída HTML usando 		document.write().
+-Escrevendo em uma caixa de alerta, usando 	window.alert().
+-Escrevendo no console do navegador, usando 	console.log().
+
+2.1) InnerHTML
+- Para acessar um elemento HTML, o JavaScript pode usar o método document.getElementById(id). O atributo id define o 
+elemento HTML. A innerHTML propriedade define o conteúdo HTML:
+-> document.getElementById("demo").innerHTML = 5 + 6;
+
+2.2) Document.write()
+-> document.write(5 + 6);
+0BS:. O uso de document.write() após o carregamento de um documento HTML excluirá todo o HTML existente.
+      O método document.write() deve ser usado apenas para teste.
+
+2.3) Window.alert()/alert()
+- Você pode usar uma caixa de alerta para exibir dados, antes da pagina ser executa.
+-> window.alert(5 + 6);
+
+2.4) Console.log()
+- Para fins de depuração, você pode chamar o método console.log() no navegador para exibir dados.
+
+2.5) JavaScript Impressão
+- O JavaScript não possui nenhum objeto ou método de impressão. Você não pode acessar dispositivos de saída do 
+JavaScript. A única exceção é que você pode chamar o método window.print() no navegador para imprimir o conteúdo da 
+janela atual.
+-> button onclick="window.print()">Print this page</button>
+
+3) JavaScript Statements
+- Values, Operators, Expressions, Keywords, and Comments.
+- Ponto e virgula separa as intruções do JS.
+-> var a, b, c;     // Declare 3 variables
+   a = 5;           // Assign the value 5 to a
+   b = 6;           // Assign the value 6 to b
+   c = a + b;       // Assign the sum of a and b to c
+
+-> a = 5; b = 6; c = a + b;
+
+3.1) JS Code block 
+- As instruções JavaScript podem ser agrupadas em blocos de código, dentro de colchetes {...}. O objetivo dos blocos 
+de código é definir instruções a serem executadas juntas. Um lugar em que você encontrará instruções agrupadas em 
+blocos é nas funções JavaScript.
+-> function myFunction() {
+   	document.getElementById("demo1").innerHTML = "Hello Dolly!";
+  	document.getElementById("demo2").innerHTML = "How are you?";
+}
+
+3.2) JS Keywords
+
+break		Encerra um comutador ou um loop
+continue	Salta de um loop e começa no topo
+debugger	Interrompe a execução do JavaScript e chama (se disponível) a função de depuração
+do ... while	Executa um bloco de instruções e repete o bloco, enquanto uma condição é verdadeira
+for		Marca um bloco de instruções a serem executadas, desde que uma condição seja verdadeira
+function	Declara uma função
+if ... else	Marca um bloco de instruções a serem executadas, dependendo de uma condição
+return		Sai de uma função
+switch		Marca um bloco de instruções a serem executadas, dependendo de casos diferentes
+try ... catch	Implementa o tratamento de erros em um bloco de instruções
+var		Declara uma variável
+
+3.3) BreakLine
+-> document.getElementById("demo").innerHTML =
+pi + "<br>" + person + "<br>" + answer;
+
+4) Variables
+- var person = "John Doe", carName = "Volvo", price = 200;
+- var person = "John Doe",
+  carName = "Volvo",
+  price = 200;
+- var person, carName;
+  person = "Daniel";
+  carName = "GOL";
+- var x = 5 + 2 + 3;
+- var x = "John" + " " + "Doe";
+- var x = "5" + 2 + 3;
+- var $$$ = "Hello World", var _Olá = 2, var = OLÁ = 5;
+
+5) JS DataTypes
+- var cars = ["Saab", "Volvo", "BMW"]; //ARRAY
+- var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; //OBJECT
+- var person = null; //nothing, typeof = null
+- typeof "Dan" //return "string"
+  
+6) JS Functions
+- function myFunction(p1, p2) {
+    return p1 * p2;   
+}
+- var x = myFunction(4, 3);
+
+7) JS Object
+-> var car = {type:"Fiat", model:"500", color:"white", name: fullName();}; //car.type return "Fiat"
+									   // car["type] return "Fiat"
+-var x = new String();        // Declares x as a String object
+-var y = new Number();        // Declares y as a Number object
+-var z = new Boolean();       // Declares z as a Boolean object
+
+8) JS Events
+
+9) Strings (sao imutaveis, não podem ser alteradas, apenas substituidas)
+- var x = "We are the so-called \"Vikings\" from the north."; //double quote
+- var x = 'It\'s alright.'; //single quote
+- var x = "The character \\ is called backslash."; // backslash
+-\b	Backspace
+-\f	Form Feed
+-\n	New Line
+-\r	Carriage Return
+-\t	Horizontal Tabulator
+-\v	Vertical Tabulator
+
+9.1) String Methods (todos esses metodos retorna uma nova string, não muda a original)
+- txt.length // return the size 
+- txt.indexOf("blabla") //return the position of the firt occurrence of a specified text
+- txt.lastIndexOf("blabla") //return the position of the last occurrence of a specified text
+OBS:. mbos os métodos aceitam um segundo parâmetro como a posição inicial da pesquisa ("bla",15)
+- txt.search("blabla") //searches a string for a specified value and returns the position of the match
+- txt.slice(7,13) // extracts a part of a string (start, end-1), accept negative indexes (end of string)
+- txt.substring(7,13) // extracts a part of a string (start, end-1), but cannot accept negative indexes
+- txt.substr(7,6) //extracts a part of a string (start, length), accept negative indexes (end of string)
+- txt.replace("Daniel", "Menino") // replace a specified value with another value
+OBS:. The replace() method does not change the string it is called on. It returns a new string.
+OBS:. Para substituir sem distinção entre maiúsculas e minúsculas, use uma expressão regular com uma sinalização /i
+-> var n = str.replace(/MICROSOFT/i, "W3Schools"); you can use /g (global)
+- txt.toUpperCase() 
+- txt.toLowerCase() 
+- var txt3 = txt1.concat(" ", txt2) // junta duas ou mais cadeias
+- txt.trim() // remove the whitespaces from the both sides of a string "    ola  "
+- txt[0] // return the character of the position 
+- txt.charAt(0) // return the character of the position
+- txt.charCodeAt(0) // returns the unicode of the character
+
+9.2) Converting a String to an Array (split())
+var str = "a,b,c,d,e,f";
+var arr = str.split(",");
+arr[0] returns "a"
+
+10) Numbers
+- var y = 123e5; 
+- var z = 123e-5;
+OBS:. Inteiros (números sem ponto ou notação de expoente) têm precisão de até 15 dígitos.
+-var x = 999999999999999;   // x will be 999999999999999
+-var y = 9999999999999999;  // y will be 10000000000000000
+OBS:. O número máximo de casas decimais é 17, mas a aritmética de ponto flutuante nem sempre é 100% precisa
+-var x = 0.2 + 0.1;         // x will be 0.30000000000000004
+-var x = (0.2 * 10 + 0.1 * 10) / 10;  
+-var x = "100", var y = "10";
+ var z = x / y; // return 10
+
+10.1) Infinity
+var myNumber = 2;
+while (myNumber != Infinity) { 
+  myNumber = myNumber * myNumber;
+}
+- var x =  2 / 0; // x will be Infinity
+- typeof Infinity; // returns "number"
+
+10.2) Hexadecimal
+- var x = 0xFF; // x will be 255
+-var myNumber = 32;
+-myNumber.toString(2);  // returns 100000 = 32 base 2
+
+11) Numbers Methods
+-num.toFixed(x) // return the number with a specified number of decimals, if x = 0 arredonda
+-num.toPrecision(x) // return the number with a specified length
+-num.valueOf() // return a number as a number
+-Number(x) // can be used to convert JavaScript variables to number
+OBS:. can also convert a date -> Number(new Date("2017-09-30")); (number of milliseconds since 1.1.1970.)
+-parseInt(x) // parses a string and returns a whole number. Spaces are allowed. Only the first number is returned
+-parseFloat(x) // parses a string and returns a number. Spaces are allowed. Only the first number is returned
+-Number.MAX_VALUE	// Returns the largest number possible in JavaScript
+-Number.MIN_VALUE	// Returns the smallest number possible in JavaScript
+-Number.POSITIVE_INFINITY	// Represents infinity (returned on overflow)
+-Number.NEGATIVE_INFINITY	// Represents negative infinity (returned on overflow)
+-NaN	// Represents a "Not-a-Number" value
+
+12) Arrays
+- var cars = *new Array* ["Saab", "Volvo", "BMW"];
+OBS:. if you document.getElementById("demo").innerHTML = cars; will return Saab,Volvo,BMW
+- cars[0] // will return Saab
+- cars[0] = "Fiat" // you can change the position
+- delete car[4]; //delete the element, and change to undefined
+- cars.length // number of elements
+- cars.sort() // sort array
+OBS:. Adding elements with high indexes can create undefined "holes" in an array
+
+12.1) Looping Array
+-for (i = 0; i < cars.length.; i++) {
+  text += "<li>" + cars[i] + "</li>";
+}
+
+12.2) Array Methods
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+- fruits.toString(); // converts an array to a string of (comma separated)
+- fruits.join(" * "); // method also joins all array elements into a string. but you can specify the separator
+- fruits.pop(); //remove last element, return the value that was "popped out"
+- fruits.push(); //adds a new element, return the new array length
+- fruits.shift(); // remove the first element, return the value that waws "shifted out"
+- fruits.unshift(); //add new elements at the beggining, return new array length
+- fruits[fruits.length] = "Kiwi"; //easy way to append a new element
+- fruits.splice(2, 0, "Lemon", "Kiwi"); // (where,how many elements should be removed,new elements)
+- fruits.splice(0,1); // remove the first element
+- fruits.concat(legums); // create a new array with 2 arrays, can be (leguns,x,x1)...
+- fruits.slice(1);
+
+12.3) Array.forEach()
+- The forEach() method calls a function (a callback function) once for each array element.
+
+var txt = "";
+var numbers = [45, 4, 9, 16, 25];
+numbers.forEach(myFunction);
+
+function myFunction(value) {
+  txt = txt + value + "<br>";
+}
+
+12.4) Array.map()
+- The map() method creates a new array by performing a function on each array element.
+
+var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+
+12.5) Array.filter()
+- The filter() method creates a new array with array elements that passes a test.
+
+var numbers = [45, 4, 9, 16, 25];
+var over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+12.6) Array.every()
+- The every() method check if all array values pass a test.
+
+var allOver18 = numbers.every(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+12.7) Array.some()
+- The some() method check if some array values pass a test.
+
+var someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+12.8) Array.indexOf()/ Array.lastIndexOf(return the position of last one)
+- The indexOf() method searches an array for an element value and returns its position.
+
+12.9) Array.find()/findIndex(return the index)
+- The find() method returns the value of the first array element that passes a test function.
+
+var numbers = [4, 9, 16, 25, 29];
+var first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+13) Date
+
+14)Math
+- Math.PI; // returns 3.14159265...
+- Math.round(4.7) // return the approximation
+- Math.pow(8,2) // 8**2
+- Math.sqrt(64) // raiz de 64
+- Math.abs(-4,7) //return the absolute value
+- Math.ceil(4,4) // return up approximation
+- Math.floor(4,4) // return the down approximation
+- Math.sin/cos/tan(x) // in radians (degrees * PI/ 180)
+- Math.min() and Math.max() 
+- Math.random() // return a random number between 0 and 1
+- Math.log(x)
+
+14.1) Random
+- Math.floor(Math.random() * 10);     // returns a random integer from 0 to 9
+- Math.floor(Math.random() * 11);     // returns a random integer from 0 to 10
+- Math.floor(Math.random() * 100);     // returns a random integer from 0 to 99
+- Math.floor(Math.random() * 101);     // returns a random integer from 0 to 100
+- Math.floor(Math.random() * 10) + 1;     // returns a random integer from 1 to 10
+- Math.floor(Math.random() * 100 + 1);     // returns a random integer from 1 to 100
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+15) Boolean
+- Everything With a "Value" is True
+- Everything Without a "Value" is True
+- Boolean can be object
+- Boolean(10 > 9) // returns true
+
+16) Comparisons
+var x = 5;
+
+x == 8	false	(equal to)
+x == 5	true	(equal to)
+x == "5" true	(equal to)
+x === 5	true	(equal value and equal type)
+x === "5" false	(equal value and equal type)
+x != 8	true	(not equal)
+x !== 5	false	(not equal or not equal type)
+x !== "5" true	(not equal or not equal type)
+x !== 8	true	(not equal or not equal type)
+x > 8	false	(greater than)
+x < 8	true	(less then)
+x >= 8	false	(greater than or equal to)
+x <= 8	true    (less than or equal to)
+
+and -> &&
+or -> ||
+not -> !
+
+16.1) Thernary Condition
+
+function myFunction() {
+  var age, voteable;
+  age = document.getElementById("age").value;
+  voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+
+17) Switch
+- The switch statement is used to perform different actions based on different conditions.
+
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+18) For/in
+
+var person = {fname:"John", lname:"Doe", age:25};
+
+var text = "";
+var x;
+for (x in person) {
+  text += person[x];
+}
+
+18.2) For of
+
+var cars = ['BMW', 'Volvo', 'Mini'];
+var x;
+
+for (x of cars) {
+  document.write(x + "<br >");
+}
+
+19) Do/While
+
+do {
+  // code block to be executed
+}
+while (condition);
+
+20) Break/Continue
+
+for (i = 0; i < 10; i++) {
+  if (i === 3) { continue; } or {break;}
+  text += "The number is " + i + "<br>";
+}
+
