@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  // int matriz[qntLinha][qntdColuna]
+  int matriz [3][4];
+  int l,c;
+
+  for(l = 0; l < 3;l++){
+    cout << endl;   
+    for (c = 0; c < 4; c++){
+            cout << "Digite o valor da linha "
+            << (l+1) << " coluna " << (c+1) <<" ";
+            cin >> matriz[l][c];        
+    }
+
+  }
+
+  for(l = 0; l < 3;l++){
+    cout << endl;   
+    for (c = 0; c < 4; c++){
+            cout << matriz[l][c] << " ";        
+    }
+
+  }
+
+  return 0;
+}
+/*cout << "Element at x[" << i 
+                 << "][" << j << "]: "; 
+            cout << x[i][j]<<endl; */

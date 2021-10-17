@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+// BASIC DATA TYPES
+int main(){
+    int myNum = 5;               // Integer (whole number) 4 bytes (without decimal) // unsigned --> always positive
+    float myFloatNum = 5.99F or 5.99f;     // Floating point number 4 bytes (Sufficient for storing 7 decimal digits)
+    double myDoubleNum = 9.98;   // Floating point number 8 bytes (Sufficient for storing 15 decimal digits) (MORE SAFE)
+    char myLetter = 'D';         // Character 1 byte (single character/letter/number, or ASCII values)
+    bool myBoolean = true;       // Boolean 1 byte (when you cout a bool value returns 0 or 1)
+    string myText = "Hello";     // String
+}
+
+/* CHAR with ASCII:
+char a = 65, b = 66, c = 67;
+cout << a;
+cout << b;
+cout << c;
+
+will return (ABC)
+*/
+
+/* Para usar cadeias, você deve incluir um arquivo de cabeçalho adicional no código-fonte, a <string>biblioteca:
+
+Exemplo
+// Include the string library
+#include <string>
+
+// Create a string variable
+string greeting = "Hello";
+
+// Output string value
+cout << greeting;
+
+*/

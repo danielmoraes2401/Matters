@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+//Comentário Simples
+
+/*Comentário
+Com várias Linhas*/
+
+/*Sempre terá que ter um main() no programa, para começar*/
+int main() {
+    cout << "Hello, World!" << endl << endl;//Print de Hello World
+    cout << "Ola Mundo\n";//Print de Olá Mundo
+    cout << "Buenos Dias\n" << endl;/*Print de Buenos Dias*/
+    return 0;
+}

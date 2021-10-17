@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+/*CIN é a forma de input em C++*
+OBS:. (cin >> variavel) sentido inverso do cout*/
+
+
+int main(){
+    int x, y;
+    int sum;
+    cout << "Type a number: ";
+    cin >> x;
+    cout << "Type another number: ";
+    cin >> y;
+    sum = x + y;
+    cout << "Sum is: " << sum;
+}
+
+/* PROBLEMA NO CIN:
+
+string fullName;
+cout << "Type your full name: ";
+cin >> fullName;
+cout << "Your name is: " << fullName;
+
+considera um espaço (espaço em branco, tabulações etc.) como um caractere final
+mesmo se digitar varias palavras, ele só vai pegar a primeira
+
+// Type your full name: John Doe (input()
+// Your name is: John (output)                   
+
+Para isso voce tem que usar GETLINE()
+
+string fullName;
+cout << "Type your full name: ";
+getline (cin, fullName);
+cout << "Your name is: " << fullName;
+
+// Type your full name: John Doe (input)
+// Your name is: John Doe (output)                                                     */

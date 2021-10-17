@@ -1,0 +1,82 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+/*
+
+O C ++ suporta as condições lógicas usuais da matemática:
+C ++ possui as seguintes instruções condicionais:
+
+Use < if > para especificar um bloco de código a ser executado, se uma condição especificada for verdadeira
+Use < else > para especificar um bloco de código a ser executado, se a mesma condição for falsa
+Use < else if > para especificar uma nova condição para testar, se a primeira condição for falsa
+Use < switch > para especificar muitos blocos alternativos de código a serem executados                         */
+
+Ao abrir um if tem abrir umas chaves para fazer parte desse IF
+
+EX:
+#include <iostream>
+using namespace std;
+
+int main() {
+int hora ;
+cout << "Digita a hora: ";
+cin >> hora;
+
+if (hora > 0 && hora < 12){
+  cout << "Bom dia " << endl;
+
+}else if(hora > 12 && hora < 18){
+  cout << "Boa tarde" << endl;
+
+}else{  
+  cout << "Boa noite" <<endl;
+}
+
+  return 0;
+}
+
+*\
+Outro Jeito 
+
+int nota = 8;
+string result = (nota > 7) ? "Aprovado." : "Reprovado";
+cout << result;  
+
+int nota = 8;
+string result;
+(nota > 7) ? res="Aprovado." : "Reprovado";
+cout << result;
+             */
+
+//SWITCH
+
+/*
+#include <iostream>
+using namespace std;
+
+int main(){
+  
+int val;
+cout << "Selecione uma cor:\n ";
+cout << "[1] VERDE [2] AZUL [3] VERMELHO\n";
+
+cin >> val;
+
+switch(val){
+  case 1:
+    cout << "COR VERDE\n";                                           se for 1 2 3 pra verde e 4 5 6 pra azul
+    break;                                                           pode fazer:
+								     case1:		
+  case 2:                                                            case2:
+    cout << "COR AZUL\n";                                            case3:
+    break;                                                                cout << "VERDE";
+  case 3:                                     
+    cout << "COR VERMELHO\n";
+    break;
+  
+  default:
+    cout << "NUMÉRO INVALIDO\n";
+}
+
+} */

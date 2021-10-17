@@ -1,0 +1,83 @@
+// <math>
+#include <bits/stdc++.h>
+#include <cmath>
+using namespace std;
+#define PI 3.14159265
+
+double radToGra(int a){
+  return a*PI/180;
+}
+
+int main(){
+
+int ang = 45;
+cout << "SI/COS/TAN: " << endl;
+cout << sin(ang*PI/180) << endl;
+cout << cos(ang*PI/180) << endl;
+cout << tan(ang*PI/180) << endl << endl;
+
+cout << "ASIN/ACOS/ATAN: " << endl;
+cout << asin(radToGra(ang)) << endl;
+cout << acos(radToGra(ang)) << endl;
+cout << atan(radToGra(ang)) << endl << endl;
+
+cout << "ATAN2(2 parametros): " << endl;
+double x = -10.0;
+double y = 10.0;
+cout << atan2(x,y)*180/PI << endl << endl;
+
+cout << "EXPONENCIAL: " << endl;
+double x2 = 10;
+cout << exp(x2) << endl << endl;
+
+cout << "LOG: " << endl;
+double x3 = 10;
+cout << log(x3) << endl << endl;
+
+cout << "POTENCIA: " << endl;
+double x4 = 10;
+cout << pow(x4,2) << endl << endl;
+
+cout << "RAIZ QUADRADA: " << endl;
+double x5 = 9;
+cout << sqrt(x5) << endl << endl;
+
+cout << "RAIZ CUBICA: " << endl;
+double x6 = 27;
+cout << cbrt(x6) << endl << endl;
+
+cout << "HIPOTENUSA: " << endl;
+double cat1 = 3,cat2 = 4;
+cout << hypot(cat1,cat2) << endl;
+cout << sqrt(pow(cat1,2)+pow(cat2,2)) << endl << endl;
+
+cout << "ARREDONDA PRA CIMA (INT): " << endl;
+double a = 3.2;
+cout << ceil(a) << endl << endl;
+
+cout << "ARREDONDA PRA BAIXO (INT): " << endl;
+cout << floor(a) << endl << endl;
+
+cout << "ARREDONDA PRA CIMA/BAIXO (REGRA PADRAO): " << endl;
+cout << round(a) << endl << endl;
+
+cout << "RESTO DA DIVISÃO(FLOAT): " << endl;
+double e = 5.7, f = 2;
+cout << fmod(e,f) << endl << endl;
+
+cout << "DIFERENÇA POSITIVA ENTRE DOIS NUMEROS: " << endl;
+double i = 15, j = 9;
+cout << fdim(i,j) << endl << endl;
+
+cout << "MAIOR/MENOR VALOR: " << endl;
+cout << fmax(i,j) << endl;
+cout << fmin(i,j) << endl << endl;
+
+cout << "ARREDONDA O VALOR ABSOLUTO: " << endl;
+double m = -5.7, n = -2;
+cout << fabs(n) << endl;
+cout << abs(m) << endl << endl;
+
+
+return 0;
+}
