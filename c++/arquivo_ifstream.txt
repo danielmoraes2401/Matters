@@ -1,0 +1,39 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+//criando arquivoS - de saída  
+  ofstream arquivoS;
+
+  arquivoS.open("teste.txt");
+
+
+  arquivoS << "Olá\n"; 
+  arquivoS << "Tudo bem?\n";
+
+  arquivoS.close();  
+
+//criando arquivoE - entrada (leitura);
+  ifstream arquivoE;
+  string linha;
+
+//abrindo o arquivo
+  arquivoE.open("teste.txt");
+
+//verificando se o arquivo existe/aberto  
+  if (arquivoE.is_open()){
+  
+  // lendo o arquivo 
+    while (getline(arquivoE, linha)){
+      cout << linha << endl;
+    }
+
+    arquivoE.close();
+
+  } else {
+    cout << "Não foi possível abrir o arquivo" << endl;
+  }
+
+  return 0;
+}

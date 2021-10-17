@@ -1,0 +1,43 @@
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+using namespace std;
+
+int main() { 
+  fstream arquivo;
+  string opcao;
+  opcao= "s";
+  string nome, linha;
+
+//definindo que é modo de saida e quer vai dar append no arquivo (out)
+  arquivo.open("teste.txt", ios::out|ios::app);
+
+  while ((opcao == "s") or (opcao == "S")){
+    cout << "Digite um nome: ";
+    cin >> nome;
+    arquivo << nome << endl;
+    cout << "\nDigitar um novo nome? [s/n]";
+    cin >> opcao;
+    system("cls");
+  }
+
+  arquivo.close();
+
+//abrindo o arquivo dnv para poder ler o arquivo (in)
+  arquivo.open("teste.txt",ios::in);
+
+  cout << "Nomes digitados" << endl;
+
+  if (arquivo.is_open()){
+    while (getline(arquivo,linha)){
+      cout << linha << endl;
+    }
+    arquivo.close();
+
+  } else {
+
+    cout << "NÃO ABRIU" << endl;
+  }
+  
+  return 0;
+}

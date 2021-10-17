@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+//ofstream (tipo de saída(sai do programa e vai pro arquivo))
+//ifstream (tipo de entrada(sai do arquivo e entra no arquivo)
+//fstream (ambos)
+
+int main() {
+  ofstream arquivo;
+
+//criando o arquivo 
+// se colocar , ios::app (ele nunca vai apagar oque tinha no txt, apenas acrescentar)
+  arquivo.open("teste.txt");
+
+//adicionando texto no arquivo (apaga oque tem e escreve caso voce reinicie o programa)
+  arquivo << "Olá\n"; 
+  arquivo << "Tudo bem"; 
+
+//fechando o arquivo
+  arquivo.close();  
+
+  return 0;
+}

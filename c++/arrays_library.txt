@@ -1,0 +1,52 @@
+// <array>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  array <int,10> vt = {0,1,2,3,4,5,6,7,8,9}; 
+
+  cout << "PRINTANDO VALORES: " << endl;
+  for (auto i:vt){
+    cout << i << "-";
+  } cout << endl << endl;
+
+  cout << "TAMANHO DA ARRAY: " << endl;
+  cout << vt.size() << endl << endl;
+
+  cout << "CAPACIDADE MAXIMA: " << endl;
+  cout << vt.max_size() << endl << endl;
+
+  cout << "EMPTY: " << endl;
+  if (vt.empty()){
+    cout << "Array vazia!" << endl;
+  } else {
+    cout << "Array NÃO vazia!" << endl;
+  } cout << endl;
+
+  cout << "ACESSO ELEMENTOS:" << endl;
+  cout << vt.at(4) << endl;
+  cout << vt[4] << endl << endl;
+
+  cout << "ACESSO O PRIMEIRO ELEMENTO:" << endl;
+  cout << vt.front() << endl << endl;
+
+  cout << "ACESSO O ULTIMO ELEMENTO:" << endl;
+  cout << vt.back() << endl << endl;
+
+  cout << "PREENCHER COM UM ELEMENTO ESPECIFICADO:" << endl;
+  array<int,10> arr;
+  arr.fill(0);
+  for (auto i:arr){
+    cout << i << "-";
+  } cout << endl << endl; 
+
+  //mesmo tamanho de arrays
+  cout << "SWAP:" << endl;
+  vt.swap(arr);
+  
+  for (auto x:arr){
+    cout << x << "-";
+  } cout << endl << endl; 
+  
+  return 0;
+}

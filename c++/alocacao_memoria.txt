@@ -1,0 +1,24 @@
+#include <iostream>
+#include <stdio.h> //para GETS()
+#include <stdlib.h> // para MALLOC()
+using namespace std;
+
+int main() {
+  
+  char vnome[50];
+//usado como cin caso queria usar string/char com espaço
+// caso voce tenha usado 10 espaço por exemplo, 40 espaço estão sendo ocupados pela memoria desnecessariamente (trabalhar com locacao dinamica de memoria)
+// usado para reservar o espaço para o tamanho exato da variavel
+  char *nome;
+
+  nome = (char *) malloc(sizeof(char)+1);
+
+  gets(vnome);
+  gets(nome);
+
+  cout << vnome << endl;
+  cout << nome << endl;
+
+
+  return 0;
+}

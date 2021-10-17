@@ -1,0 +1,64 @@
+// <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+vector<int>vt1{1,4,7,2,5,8,3,6,9,0};
+vector<int>vt2{1,4,7,2,5,8,3,6,9,0};
+vector<int>vt3{1,4,7,2,5,8,3,6,9,0};
+vector<int>vt4{2,5,8};
+vector<int>vt5{10,11,12};
+vector<int>::iterator it;
+
+cout << "EQUAL (VERIFICA SE OS ELEMENTOS DE UMA COLEÇÃO SÃO IGUAIS AOS DE OUTRA):" << endl;
+if (equal(vt1.begin(),vt1.end(),vt2.begin())){
+  cout << "-Coleções iguais!" << endl;
+}else {
+  cout << "-Coleções dif!" << endl;
+} cout << endl;
+
+cout << "SEARCH (PESQUISA SE UMA COLEÇÃO ESTÁ EM OUTRA)" << endl;
+it = search (vt1.begin(), vt1.end(), vt4.begin(),vt4.end());
+if (it != vt1.end()){
+  cout << "-Coleção encontra na posição: " << it-vt1.begin() << endl;
+} else {
+  cout << "-Coleção não encontrada!" << endl;
+} cout << endl;
+
+cout << "COPY (COPIA ELEMENTOS DE UMA COLEÇÃO EM OUTRA, MAS NÃO CRIA NOVAS POSIÇÕES):" << endl;
+copy(vt5.begin(),vt5.end(), vt3.begin());
+for (int x:vt3){
+  cout << x << " ";
+} cout << endl << endl;
+
+cout << "COPY_IF (COPIA ELEMENTOS DE UMA COLEÇÃO EM OUTRA, QUE ATENDAM A UMA CONDIÇÃO, MAS NÃO CRIA NOVAS POSIÇÕES):" << endl;
+copy_if (vt5.begin(),vt5.end(),vt1.begin(),[] (int i) {return (i%2) == 0;});
+for (int x:vt1){
+  cout << x << " ";
+} cout << endl << endl;
+
+cout << "MOVE(MOVE ELEMENTO DE UMA COLEÇÃO PARA OUTRA):" << endl;
+vt4 = move(vt1);
+//vt1 fica vazia
+for (int x:vt4){
+  cout << x << " ";
+} cout << endl << endl;
+
+cout << "SWAP:" << endl;
+swap(vt2,vt3);
+
+cout << "TRANSFORM (FUNÇÃO QUE ALTERA OS VALORES):" << endl;
+transform (vt5.begin(),vt5.end(),vt5.begin(),[] (int i) {return i*100;});
+for (int x:vt5){
+  cout << x << " ";
+} cout << endl << endl;
+
+cout << "REPLACE (SUBSTITUI UM ELEMENTO POR OUTRO):" << endl;
+replace(vt2.begin(),vt2.end(),5,500);
+for (int x:vt2){
+  cout << x << " ";
+} cout << endl << endl;
+
+
+return 0;
+}
